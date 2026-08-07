@@ -1,0 +1,1170 @@
+:root{
+
+    --azul-escuro:#071633;
+    --azul:#112d67;
+    --azul-claro:#74c9ff;
+
+    --roxo:#6c55ff;
+    --roxo-claro:#9f92ff;
+    --roxo-escuro:#37278f;
+
+    --branco:#f7f8ff;
+    --cinza:#dfe4f2;
+    --texto:#12172c;
+
+    --borda:#12172c;
+
+}
+
+
+/* RESET */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(108,85,255,.35),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            180deg,
+            #071633,
+            #0b1f4b,
+            #171445
+        );
+
+    color:var(--branco);
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+/* FUNDO */
+
+.fundo-decorativo{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+
+.estrela{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    background:white;
+
+    box-shadow:
+
+        8px 0 white,
+        -8px 0 white,
+        0 8px white,
+        0 -8px white;
+
+    animation:piscar 2.5s infinite alternate;
+
+}
+
+
+.e1{
+
+    top:10%;
+    left:8%;
+
+}
+
+
+.e2{
+
+    top:25%;
+    right:10%;
+
+    animation-delay:.6s;
+
+}
+
+
+.e3{
+
+    bottom:18%;
+    left:72%;
+
+    animation-delay:1.2s;
+
+}
+
+
+/* NUVENS RETRÔ SIMPLES */
+
+.nuvem{
+
+    position:absolute;
+
+    width:180px;
+
+    height:45px;
+
+    background:rgba(255,255,255,.07);
+
+    border:2px solid rgba(255,255,255,.13);
+
+}
+
+
+.nuvem::before,
+.nuvem::after{
+
+    content:"";
+
+    position:absolute;
+
+    background:inherit;
+
+    border:inherit;
+
+}
+
+
+.nuvem::before{
+
+    width:70px;
+
+    height:60px;
+
+    left:25px;
+
+    bottom:20px;
+
+}
+
+
+.nuvem::after{
+
+    width:85px;
+
+    height:75px;
+
+    right:20px;
+
+    bottom:20px;
+
+}
+
+
+.nuvem-1{
+
+    top:20%;
+    left:-80px;
+
+    animation:moverNuvem 28s linear infinite;
+
+}
+
+
+.nuvem-2{
+
+    top:68%;
+    right:-120px;
+
+    animation:moverNuvemReversa 35s linear infinite;
+
+}
+
+
+/* SISTEMA */
+
+.sistema{
+
+    width:min(1180px,92%);
+
+    margin:34px auto;
+
+}
+
+
+/* JANELAS */
+
+.janela{
+
+    margin-bottom:28px;
+
+    overflow:hidden;
+
+    background:rgba(248,249,255,.97);
+
+    color:var(--texto);
+
+    border:2px solid var(--borda);
+
+    border-radius:9px;
+
+    box-shadow:
+
+        7px 7px 0 rgba(0,0,0,.2),
+
+        0 25px 60px rgba(0,0,0,.22);
+
+}
+
+
+.barra-janela{
+
+    min-height:48px;
+
+    padding:9px 14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    background:var(--branco);
+
+    border-bottom:2px solid var(--borda);
+
+}
+
+
+.barra-janela > span{
+
+    color:var(--texto);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:11px;
+
+}
+
+
+.controles-janela{
+
+    display:flex;
+
+    gap:7px;
+
+}
+
+
+.controles-janela span{
+
+    width:18px;
+    height:18px;
+
+    display:block;
+
+    border:2px solid var(--borda);
+    border-radius:50%;
+
+    background:white;
+
+}
+
+
+/* HERO */
+
+.hero{
+
+    min-height:540px;
+
+    padding:58px;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    align-items:center;
+
+    gap:60px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(116,201,255,.17),
+            rgba(108,85,255,.14)
+        );
+
+}
+
+
+.mensagem-sistema{
+
+    margin-bottom:22px;
+
+    color:var(--roxo-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:9px;
+
+}
+
+
+.hero h1{
+
+    max-width:700px;
+
+    color:var(--azul-escuro);
+
+    font-size:clamp(42px,5vw,72px);
+
+    line-height:1.04;
+
+    letter-spacing:-3px;
+
+}
+
+
+.hero h1 span{
+
+    color:var(--roxo);
+
+}
+
+
+.descricao{
+
+    max-width:640px;
+
+    margin:25px 0 32px;
+
+    color:#525a73;
+
+    font-size:17px;
+
+    line-height:1.75;
+
+}
+
+
+.botao-retro{
+
+    display:inline-block;
+
+    padding:15px 22px;
+
+    background:var(--roxo);
+
+    color:white;
+
+    border:2px solid var(--borda);
+
+    border-radius:5px;
+
+    box-shadow:5px 5px 0 var(--borda);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:9px;
+
+    text-decoration:none;
+
+    transition:.2s;
+
+}
+
+
+.botao-retro:hover{
+
+    transform:translate(3px,3px);
+
+    box-shadow:2px 2px 0 var(--borda);
+
+}
+
+
+/* TERMÔMETRO HOME */
+
+.hero-visual{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.termometro-home{
+
+    position:relative;
+
+    width:105px;
+
+    height:330px;
+
+}
+
+
+.tubo-home{
+
+    position:absolute;
+
+    width:52px;
+
+    height:270px;
+
+    left:26px;
+
+    top:0;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:6px solid var(--borda);
+
+    border-radius:30px 30px 10px 10px;
+
+}
+
+
+.liquido-home{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:48%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            var(--roxo-claro),
+            var(--roxo)
+        );
+
+    animation:respirarTermometro 3s ease-in-out infinite alternate;
+
+}
+
+
+.bulbo-home{
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    bottom:0;
+    left:7px;
+
+    background:var(--roxo);
+
+    border:6px solid var(--borda);
+
+    border-radius:50%;
+
+}
+
+
+.painel-temperatura{
+
+    min-width:190px;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:7px;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+    box-shadow:4px 4px 0 var(--borda);
+
+}
+
+
+.painel-temperatura strong{
+
+    color:var(--azul-escuro);
+
+    font-size:26px;
+
+}
+
+
+.painel-temperatura > span:last-child{
+
+    color:#646b82;
+
+}
+
+
+.label-mini{
+
+    color:var(--roxo-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+}
+
+
+/* PROGRAMAS */
+
+.grade-programas{
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+
+.programa{
+
+    min-height:255px;
+
+    padding:26px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    background:white;
+
+    color:var(--texto);
+
+    border:2px solid var(--borda);
+
+    border-radius:6px;
+
+    box-shadow:5px 5px 0 var(--borda);
+
+    text-decoration:none;
+
+    transition:.2s;
+
+}
+
+
+.programa:hover{
+
+    transform:translateY(-7px);
+
+    background:#f2efff;
+
+}
+
+
+.programa h2{
+
+    margin:18px 0 7px;
+
+    color:var(--azul-escuro);
+
+    font-size:21px;
+
+}
+
+
+.programa p{
+
+    color:#616981;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+.abrir{
+
+    margin-top:auto;
+
+    padding-top:20px;
+
+    color:var(--roxo-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+}
+
+
+/* ÍCONES */
+
+.icone{
+
+    position:relative;
+
+    width:56px;
+
+    height:56px;
+
+    transition:.25s;
+
+}
+
+
+.programa:hover .icone{
+
+    transform:
+        translateY(-3px)
+        rotate(-2deg);
+
+}
+
+
+/* LIVRO */
+
+.icone-livro{
+
+    display:flex;
+
+    gap:3px;
+
+}
+
+
+.icone-livro span{
+
+    flex:1;
+
+    height:46px;
+
+    margin-top:5px;
+
+    background:#e8e6ff;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.icone-livro span:first-child{
+
+    transform:skewY(-7deg);
+
+}
+
+
+.icone-livro span:last-child{
+
+    transform:skewY(7deg);
+
+}
+
+
+/* TERMÔMETRO */
+
+.icone-termometro{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.icone-tubo{
+
+    position:absolute;
+
+    top:2px;
+
+    width:18px;
+
+    height:42px;
+
+    background:white;
+
+    border:3px solid var(--borda);
+
+    border-radius:10px;
+
+}
+
+
+.icone-tubo::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:6px;
+
+    height:24px;
+
+    bottom:0;
+
+    left:3px;
+
+    background:var(--roxo);
+
+}
+
+
+.icone-bulbo{
+
+    position:absolute;
+
+    bottom:1px;
+
+    width:28px;
+
+    height:28px;
+
+    border:3px solid var(--borda);
+
+    background:var(--roxo);
+
+    border-radius:50%;
+
+}
+
+
+/* LAB */
+
+.frasco-corpo{
+
+    position:absolute;
+
+    width:40px;
+
+    height:40px;
+
+    bottom:3px;
+
+    left:8px;
+
+    background:white;
+
+    border:3px solid var(--borda);
+
+    clip-path:
+        polygon(
+            25% 0,
+            75% 0,
+            75% 28%,
+            100% 100%,
+            0 100%,
+            25% 28%
+        );
+
+}
+
+
+.frasco-liquido{
+
+    position:absolute;
+
+    width:32px;
+
+    height:14px;
+
+    bottom:8px;
+
+    left:12px;
+
+    background:var(--roxo);
+
+}
+
+
+/* LISTA */
+
+.icone-lista{
+
+    padding:8px 6px;
+
+    border:3px solid var(--borda);
+
+    background:#f7f7ff;
+
+}
+
+
+.icone-lista span{
+
+    display:block;
+
+    height:5px;
+
+    margin:6px 0;
+
+    background:var(--roxo);
+
+}
+
+
+/* PROVA */
+
+.folha{
+
+    position:absolute;
+
+    width:40px;
+
+    height:50px;
+
+    left:6px;
+
+    background:white;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.marca{
+
+    position:absolute;
+
+    width:20px;
+
+    height:10px;
+
+    border-left:4px solid var(--roxo);
+
+    border-bottom:4px solid var(--roxo);
+
+    transform:rotate(-45deg);
+
+    left:20px;
+
+    top:20px;
+
+}
+
+
+/* VIDEO */
+
+.video-tela{
+
+    position:absolute;
+
+    width:56px;
+
+    height:40px;
+
+    top:6px;
+
+    border:3px solid var(--borda);
+
+    background:#eceaff;
+
+}
+
+
+.video-play{
+
+    position:absolute;
+
+    top:17px;
+
+    left:23px;
+
+    width:0;
+
+    height:0;
+
+    border-top:9px solid transparent;
+
+    border-bottom:9px solid transparent;
+
+    border-left:14px solid var(--roxo);
+
+}
+
+
+/* PERFIL */
+
+.cabeca{
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    left:17px;
+
+    top:3px;
+
+    background:#eeeaff;
+
+    border:3px solid var(--borda);
+
+    border-radius:50%;
+
+}
+
+
+.corpo{
+
+    position:absolute;
+
+    width:42px;
+
+    height:27px;
+
+    left:7px;
+
+    bottom:3px;
+
+    background:#eeeaff;
+
+    border:3px solid var(--borda);
+
+    border-radius:22px 22px 5px 5px;
+
+}
+
+
+/* STATUS */
+
+.status-conteudo{
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:.7fr 1.6fr .9fr;
+
+    gap:22px;
+
+}
+
+
+.status-item{
+
+    min-height:110px;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+}
+
+
+.status-label{
+
+    margin-bottom:12px;
+
+    color:#6b7287;
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+}
+
+
+.status-item strong{
+
+    color:var(--azul-escuro);
+
+    font-size:26px;
+
+}
+
+
+.texto-menor{
+
+    font-size:17px !important;
+
+}
+
+
+.barra-xp{
+
+    height:20px;
+
+    margin-bottom:8px;
+
+    overflow:hidden;
+
+    background:#dfe4f2;
+
+    border:2px solid var(--borda);
+
+}
+
+
+.xp-preenchimento{
+
+    width:0%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--azul-claro),
+            var(--roxo)
+        );
+
+    transition:width .4s ease;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+    padding:10px 3px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#cbd2ee;
+
+    font-size:11px;
+
+}
+
+
+footer a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes piscar{
+
+    from{
+
+        opacity:.25;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+
+@keyframes respirarTermometro{
+
+    from{
+
+        height:43%;
+
+    }
+
+    to{
+
+        height:52%;
+
+    }
+
+}
+
+
+@keyframes moverNuvem{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(130vw);
+
+    }
+
+}
+
+
+@keyframes moverNuvemReversa{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-130vw);
+
+    }
+
+}

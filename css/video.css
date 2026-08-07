@@ -1,0 +1,1174 @@
+/* =========================================
+   TERMOLAB OS
+   VIDEO LIBRARY
+========================================= */
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.videos-hero{
+
+    min-height:360px;
+
+    padding:52px;
+
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) auto;
+
+    align-items:center;
+
+    gap:60px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(116,201,255,.18),
+            rgba(108,85,255,.16)
+        );
+
+}
+
+
+.videos-hero-texto{
+
+    min-width:0;
+
+}
+
+
+.videos-hero h1{
+
+    max-width:800px;
+
+    margin-bottom:20px;
+
+    color:var(--azul-escuro);
+
+    font-size:clamp(42px,6vw,72px);
+
+    line-height:1.04;
+
+    letter-spacing:-3px;
+
+}
+
+
+.videos-hero h1 span{
+
+    color:var(--roxo);
+
+}
+
+
+.videos-hero-texto > p:last-child{
+
+    max-width:680px;
+
+    color:#596078;
+
+    font-size:16px;
+
+    line-height:1.75;
+
+}
+
+
+
+/* =========================================
+   MONITOR
+========================================= */
+
+.monitor-video{
+
+    width:190px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.monitor-tela{
+
+    position:relative;
+
+    width:190px;
+
+    height:135px;
+
+    display:grid;
+
+    place-items:center;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #dff4ff,
+            #e5ddff
+        );
+
+    border:5px solid var(--borda);
+
+    box-shadow:
+        7px 7px 0 var(--borda);
+
+}
+
+
+.monitor-tela::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:13px;
+
+    border:2px dashed rgba(17,23,44,.22);
+
+}
+
+
+.play-grande{
+
+    position:relative;
+
+    z-index:2;
+
+    width:0;
+
+    height:0;
+
+    margin-left:8px;
+
+    border-top:25px solid transparent;
+
+    border-bottom:25px solid transparent;
+
+    border-left:39px solid var(--roxo);
+
+    transition:.25s;
+
+}
+
+
+.monitor-video:hover .play-grande{
+
+    transform:scale(1.15);
+
+}
+
+
+.monitor-base{
+
+    width:80px;
+
+    height:21px;
+
+    margin-top:13px;
+
+    background:white;
+
+    border:4px solid var(--borda);
+
+}
+
+
+
+/* =========================================
+   BUSCA
+========================================= */
+
+.busca-videos{
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) 180px;
+
+    gap:24px;
+
+}
+
+
+.campo-busca{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+.campo-busca label,
+.contador-videos span{
+
+    color:#687087;
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+}
+
+
+.campo-busca input{
+
+    width:100%;
+
+    min-width:0;
+
+    min-height:52px;
+
+    padding:12px 15px;
+
+    background:white;
+
+    color:var(--texto);
+
+    border:2px solid var(--borda);
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+
+.campo-busca input:focus{
+
+    border-color:var(--roxo);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(108,85,255,.15);
+
+}
+
+
+.contador-videos{
+
+    min-height:80px;
+
+    padding:16px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        4px 4px 0 var(--borda);
+
+}
+
+
+.contador-videos strong{
+
+    margin-top:10px;
+
+    color:var(--roxo);
+
+    font-size:28px;
+
+}
+
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.filtros-videos{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+/*
+   Mesmo padrão visual usado em outras
+   áreas do TermoLab OS.
+*/
+
+.filtro-video{
+
+    min-height:44px;
+
+    padding:12px 18px;
+
+    background:white;
+
+    color:var(--azul-escuro);
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        3px 3px 0 var(--borda);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+    line-height:1.5;
+
+    cursor:pointer;
+
+    transition:.15s;
+
+}
+
+
+.filtro-video:hover{
+
+    transform:translateY(-2px);
+
+    background:#f1efff;
+
+}
+
+
+.filtro-video.ativo{
+
+    transform:translate(2px,2px);
+
+    background:var(--roxo);
+
+    color:white;
+
+    box-shadow:
+        1px 1px 0 var(--borda);
+
+}
+
+
+
+/* =========================================
+   GRADE
+========================================= */
+
+.grade-videos{
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:24px;
+
+}
+
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.video-card{
+
+    min-width:0;
+
+    min-height:420px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        5px 5px 0 var(--borda);
+
+    transition:.2s;
+
+}
+
+
+.video-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+/* =========================================
+   THUMBNAIL
+========================================= */
+
+.video-thumbnail{
+
+    position:relative;
+
+    height:180px;
+
+    overflow:hidden;
+
+    background:#11172c;
+
+    border-bottom:2px solid var(--borda);
+
+}
+
+
+.video-thumbnail img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.thumbnail-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:grid;
+
+    place-items:center;
+
+    background:
+
+        linear-gradient(
+            rgba(7,22,51,.03),
+            rgba(7,22,51,.5)
+        );
+
+    transition:.3s;
+
+}
+
+
+.video-card:hover
+.video-thumbnail img{
+
+    transform:scale(1.06);
+
+}
+
+
+.video-card:hover
+.thumbnail-overlay{
+
+    background:
+        rgba(108,85,255,.25);
+
+}
+
+
+
+/* =========================================
+   PLAY
+========================================= */
+
+.play-card{
+
+    position:relative;
+
+    width:58px;
+
+    height:58px;
+
+    display:grid;
+
+    place-items:center;
+
+    z-index:2;
+
+    background:white;
+
+    border:3px solid var(--borda);
+
+    border-radius:50%;
+
+    box-shadow:
+        4px 4px 0 var(--borda);
+
+    transition:.2s;
+
+}
+
+
+.play-card::after{
+
+    content:"";
+
+    width:0;
+
+    height:0;
+
+    margin-left:5px;
+
+    border-top:10px solid transparent;
+
+    border-bottom:10px solid transparent;
+
+    border-left:17px solid var(--roxo);
+
+}
+
+
+.video-card:hover .play-card{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* =========================================
+   CONTEÚDO CARD
+========================================= */
+
+.video-card-conteudo{
+
+    flex:1;
+
+    min-width:0;
+
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.video-tema{
+
+    align-self:flex-start;
+
+    margin-bottom:12px;
+
+    padding:6px 8px;
+
+    background:#eeecff;
+
+    color:var(--roxo-escuro);
+
+    border:1px solid var(--borda);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:5px;
+
+}
+
+
+.video-card h2{
+
+    margin-bottom:10px;
+
+    color:var(--azul-escuro);
+
+    font-size:19px;
+
+    line-height:1.35;
+
+    overflow-wrap:anywhere;
+
+}
+
+
+.video-card p{
+
+    color:#626980;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+
+.video-meta{
+
+    margin-top:auto;
+
+    padding-top:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    color:#737a90;
+
+    font-size:11px;
+
+}
+
+
+
+/* =========================================
+   BOTÃO ASSISTIR
+========================================= */
+
+/*
+   Mesmo estilo dos botões das aulas
+   e banco de questões.
+*/
+
+.abrir-video{
+
+    width:100%;
+
+    min-height:46px;
+
+    margin-top:18px;
+
+    padding:12px 16px;
+
+    background:var(--roxo);
+
+    color:white;
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        3px 3px 0 var(--borda);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+    cursor:pointer;
+
+    transition:.15s;
+
+}
+
+
+.abrir-video:hover{
+
+    transform:translate(2px,2px);
+
+    box-shadow:
+        1px 1px 0 var(--borda);
+
+}
+
+
+
+/* =========================================
+   SEM RESULTADOS
+========================================= */
+
+.nenhum-video{
+
+    display:none;
+
+    padding:50px 25px;
+
+    color:#626980;
+
+    text-align:center;
+
+}
+
+
+
+/* =========================================
+   PLAYER / DETALHES
+========================================= */
+
+.video-detalhes{
+
+    display:none;
+
+}
+
+
+.video-detalhes.aberto{
+
+    display:block;
+
+}
+
+
+.fechar-video{
+
+    width:30px;
+
+    height:30px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:white;
+
+    color:var(--texto);
+
+    border:2px solid var(--borda);
+
+    border-radius:50%;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}
+
+
+.fechar-video:hover{
+
+    background:#eeecff;
+
+}
+
+
+.detalhes-conteudo{
+
+    padding:40px;
+
+}
+
+
+.detalhes-conteudo h2{
+
+    max-width:900px;
+
+    margin-bottom:20px;
+
+    color:var(--azul-escuro);
+
+    font-size:clamp(30px,5vw,52px);
+
+    line-height:1.1;
+
+}
+
+
+.detalhes-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+
+.detalhes-tags span{
+
+    padding:7px 10px;
+
+    background:#eeecff;
+
+    color:var(--roxo-escuro);
+
+    border:1px solid var(--borda);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:6px;
+
+}
+
+
+.detalhe-descricao{
+
+    max-width:800px;
+
+    color:#555d75;
+
+    font-size:15px;
+
+    line-height:1.75;
+
+}
+
+
+
+/* =========================================
+   YOUTUBE PLAYER
+========================================= */
+
+.player-container{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    margin-top:30px;
+
+    overflow:hidden;
+
+    background:#060a16;
+
+    border:3px solid var(--borda);
+
+    box-shadow:
+        6px 6px 0 var(--borda);
+
+}
+
+
+.player-container iframe{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+}
+
+
+
+/* =========================================
+   CANAL
+========================================= */
+
+.video-professor{
+
+    margin-top:28px;
+
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:11px;
+
+    background:#eeecff;
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        4px 4px 0 var(--borda);
+
+}
+
+
+.titulo-caixa{
+
+    color:var(--roxo-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+}
+
+
+.video-professor strong{
+
+    color:var(--azul-escuro);
+
+    font-size:20px;
+
+}
+
+
+.link-youtube{
+
+    margin-top:7px;
+
+    padding:10px 14px;
+
+    display:inline-block;
+
+    background:white;
+
+    color:var(--roxo-escuro);
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        3px 3px 0 var(--borda);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:6px;
+
+    line-height:1.5;
+
+    text-decoration:none;
+
+    transition:.15s;
+
+}
+
+
+.link-youtube:hover{
+
+    transform:translate(2px,2px);
+
+    box-shadow:
+        1px 1px 0 var(--borda);
+
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:900px){
+
+    .grade-videos{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+
+    .videos-hero{
+
+        gap:35px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width:600px){
+
+    .videos-hero{
+
+        min-height:auto;
+
+        padding:35px 22px;
+
+        grid-template-columns:minmax(0,1fr);
+
+        gap:30px;
+
+        text-align:center;
+
+    }
+
+
+    .videos-hero h1{
+
+        font-size:37px;
+
+        line-height:1.08;
+
+        letter-spacing:-2px;
+
+        overflow-wrap:anywhere;
+
+    }
+
+
+    .videos-hero-texto > p:last-child{
+
+        font-size:14px;
+
+    }
+
+
+    .monitor-video{
+
+        margin:0 auto;
+
+        transform:scale(.82);
+
+    }
+
+
+    .busca-videos{
+
+        grid-template-columns:minmax(0,1fr);
+
+        padding:15px;
+
+    }
+
+
+    .filtros-videos{
+
+        padding:15px;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:10px;
+
+    }
+
+
+    .filtro-video{
+
+        width:100%;
+
+        min-width:0;
+
+        padding:10px 5px;
+
+        font-size:5px;
+
+    }
+
+
+    .grade-videos{
+
+        width:100%;
+
+        padding:15px;
+
+        grid-template-columns:
+            minmax(0,1fr);
+
+        gap:20px;
+
+    }
+
+
+    .video-card{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+
+    }
+
+
+    .video-thumbnail{
+
+        height:190px;
+
+    }
+
+
+    .video-card-conteudo{
+
+        padding:20px;
+
+    }
+
+
+    .video-meta{
+
+        flex-direction:column;
+
+        gap:5px;
+
+    }
+
+
+    .detalhes-conteudo{
+
+        padding:25px 18px;
+
+    }
+
+
+    .detalhes-conteudo h2{
+
+        font-size:31px;
+
+        overflow-wrap:anywhere;
+
+    }
+
+
+    .player-container{
+
+        box-shadow:
+            4px 4px 0 var(--borda);
+
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR MUITO PEQUENO
+========================================= */
+
+@media (max-width:360px){
+
+    .filtros-videos{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .video-thumbnail{
+
+        height:165px;
+
+    }
+
+
+    .videos-hero h1{
+
+        font-size:32px;
+
+    }
+
+}

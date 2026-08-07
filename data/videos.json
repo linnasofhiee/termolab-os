@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "titulo": "Termometria: conceitos fundamentais",
+        "tema": "temperatura",
+        "temaNome": "Temperatura",
+        "nivel": "Básico",
+        "duracao": "Videoaula",
+        "youtubeId": "Y0yLOOo1JXo",
+        "canal": "Teora",
+        "descricao": "Aula geral de Termometria abordando temperatura, medição, equilíbrio térmico, escalas Celsius, Fahrenheit e Kelvin, conversões e zero absoluto."
+    },
+
+    {
+        "id": 2,
+        "titulo": "Temperatura, termômetros e escalas",
+        "tema": "termometros",
+        "temaNome": "Termômetros",
+        "nivel": "Básico",
+        "duracao": "Videoaula",
+        "youtubeId": "NSVjSXqNecg",
+        "canal": "Curso Enem Gratuito",
+        "descricao": "Introdução à Termometria com explicações sobre temperatura, funcionamento de termômetros, equilíbrio térmico e escalas termométricas."
+    },
+
+    {
+        "id": 3,
+        "titulo": "Celsius, Fahrenheit e Kelvin",
+        "tema": "escalas",
+        "temaNome": "Escalas",
+        "nivel": "Básico",
+        "duracao": "Videoaula",
+        "youtubeId": "6H5OOCTdPeo",
+        "canal": "Professor Boaro",
+        "descricao": "Aula dedicada às escalas Celsius, Fahrenheit e Kelvin, incluindo comparação entre escalas e variações de temperatura."
+    },
+
+    {
+        "id": 4,
+        "titulo": "Escalas Termométricas e Conversões",
+        "tema": "escalas",
+        "temaNome": "Escalas",
+        "nivel": "Intermediário",
+        "duracao": "Videoaula",
+        "youtubeId": "cBQ6GbHOE4E",
+        "canal": "FísiKa",
+        "descricao": "Estudo das escalas Celsius, Fahrenheit e Kelvin e das relações matemáticas utilizadas nas conversões."
+    },
+
+    {
+        "id": 5,
+        "titulo": "Conversão entre Celsius e Kelvin",
+        "tema": "conversoes",
+        "temaNome": "Conversões",
+        "nivel": "Básico",
+        "duracao": "Videoaula",
+        "youtubeId": "xUijIWcHH-M",
+        "canal": "Gis com Giz Mathematics",
+        "descricao": "Resolução passo a passo de conversões de temperatura entre as escalas Celsius e Kelvin."
+    },
+
+    {
+        "id": 6,
+        "titulo": "Temperatura absoluta e escala Kelvin",
+        "tema": "zero-absoluto",
+        "temaNome": "Zero absoluto",
+        "nivel": "Intermediário",
+        "duracao": "Videoaula",
+        "youtubeId": "LU0MIEMPIzs",
+        "canal": "Khan Academy Brasil",
+        "descricao": "Explicação da temperatura absoluta, da escala Kelvin e de sua relação com Celsius e Fahrenheit."
+    },
+
+    {
+        "id": 7,
+        "titulo": "O que acontece no Zero Absoluto?",
+        "tema": "zero-absoluto",
+        "temaNome": "Zero absoluto",
+        "nivel": "Avançado",
+        "duracao": "Videoaula",
+        "youtubeId": "0XKh2oT0b5w",
+        "canal": "Ciência Todo Dia",
+        "descricao": "Uma explicação mais aprofundada sobre o significado físico de 0 K e sobre o comportamento da matéria em temperaturas extremamente baixas."
+    }
+]

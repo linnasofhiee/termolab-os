@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Aprender | TermoLab OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teoria.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="sistema">
+
+
+        <!-- CABEÇALHO -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    LEARNING_CENTER.EXE
+                </span>
+
+                <a
+                    href="index.html"
+                    class="voltar"
+                >
+                    ← HOME
+                </a>
+
+            </div>
+
+
+            <div class="teoria-hero">
+
+
+                <div>
+
+                    <p class="mensagem-sistema">
+                        TERMOMETRIA COURSE_
+                    </p>
+
+                    <h1>
+                        Aprenda
+                        <span>Termometria</span>
+                    </h1>
+
+                    <p>
+
+                        Avance pelas fases, descubra como
+                        medimos temperatura e aprenda a
+                        trabalhar com Celsius, Fahrenheit
+                        e Kelvin.
+
+                    </p>
+
+                </div>
+
+
+                <div class="mini-termometro">
+
+                    <div class="mini-tubo">
+
+                        <div class="mini-liquido"></div>
+
+                    </div>
+
+                    <div class="mini-bulbo"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROGRESSO -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    COURSE_PROGRESS
+                </span>
+
+            </div>
+
+
+            <div class="curso-progresso">
+
+                <div class="curso-info">
+
+                    <span>
+                        PROGRESSO
+                    </span>
+
+                    <strong id="porcentagemCurso">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="barra-curso">
+
+                    <div
+                        id="barraCurso"
+                        class="barra-curso-preenchimento"
+                    ></div>
+
+                </div>
+
+
+                <p id="fasesConcluidas">
+                    0 de 8 fases concluídas
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FASES -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    LEARNING_PATH
+                </span>
+
+            </div>
+
+
+            <div
+                class="mapa-fases"
+                id="mapaFases"
+            >
+
+                <!-- JavaScript cria as fases aqui -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- AULA -->
+
+        <section
+            class="janela aula"
+            id="aula"
+        >
+
+            <div class="barra-janela">
+
+                <span id="arquivoAula">
+                    LESSON.EXE
+                </span>
+
+                <button
+                    id="fecharAula"
+                    class="fechar-aula"
+                    aria-label="Fechar aula"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="aula-conteudo">
+
+
+                <p class="mensagem-sistema">
+                    LEARNING MODE_
+                </p>
+
+
+                <h2 id="tituloAula">
+                    Aula
+                </h2>
+
+
+                <div
+                    id="textoAula"
+                    class="texto-aula"
+                ></div>
+
+
+
+                <!-- EXEMPLO REAL -->
+
+                <div class="cotidiano">
+
+                    <span class="titulo-caixa">
+                        EXEMPLO DA VIDA REAL
+                    </span>
+
+                    <h3 id="tituloExemplo">
+                        Exemplo
+                    </h3>
+
+                    <p id="textoExemplo"></p>
+
+                </div>
+
+
+
+                <!-- DESTAQUE -->
+
+                <div class="conceito-chave">
+
+                    <span>
+                        CONCEITO-CHAVE
+                    </span>
+
+                    <p id="conceitoChave"></p>
+
+                </div>
+
+
+
+                <!-- DESAFIO -->
+
+                <div class="desafio-aula">
+
+                    <p class="mensagem-sistema">
+                        CHECKPOINT_
+                    </p>
+
+                    <h3 id="perguntaAula">
+                        Pergunta
+                    </h3>
+
+
+                    <div
+                        id="alternativasAula"
+                        class="alternativas-aula"
+                    ></div>
+
+
+                    <p
+                        id="feedbackAula"
+                        class="feedback-aula"
+                    ></p>
+
+
+                    <button
+                        id="concluirAula"
+                        class="botao-retro"
+                        disabled
+                    >
+                        CONCLUIR FASE +20 XP
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/teoria.js"></script>
+
+
+</body>
+
+</html>

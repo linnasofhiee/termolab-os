@@ -1,0 +1,1644 @@
+/* =========================================
+   TERMOLAB OS
+   HOME 3.0
+========================================= */
+
+
+/* =========================================
+   FUNDO
+========================================= */
+
+.home-background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+
+.home-star{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    background:white;
+
+    box-shadow:
+        8px 0 white,
+        -8px 0 white,
+        0 8px white,
+        0 -8px white;
+
+    opacity:.55;
+
+    animation:
+        homeStarPulse
+        2.7s
+        infinite
+        alternate;
+
+}
+
+
+.star-1{
+    top:9%;
+    left:8%;
+}
+
+
+.star-2{
+    top:22%;
+    right:9%;
+    animation-delay:.5s;
+}
+
+
+.star-3{
+    top:63%;
+    left:4%;
+    animation-delay:1s;
+}
+
+
+.star-4{
+    bottom:10%;
+    right:15%;
+    animation-delay:1.4s;
+}
+
+
+.home-cloud{
+
+    position:absolute;
+
+    width:180px;
+
+    height:42px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        2px solid
+        rgba(255,255,255,.09);
+
+}
+
+
+.home-cloud::before,
+.home-cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:20px;
+
+    background:inherit;
+
+    border:inherit;
+
+}
+
+
+.home-cloud::before{
+
+    width:70px;
+
+    height:55px;
+
+    left:25px;
+
+}
+
+
+.home-cloud::after{
+
+    width:83px;
+
+    height:70px;
+
+    right:20px;
+
+}
+
+
+.cloud-1{
+
+    top:20%;
+    left:-100px;
+
+    animation:
+        homeCloudMove
+        32s
+        linear
+        infinite;
+
+}
+
+
+.cloud-2{
+
+    top:72%;
+    right:-100px;
+
+    animation:
+        homeCloudMoveReverse
+        38s
+        linear
+        infinite;
+
+}
+
+
+
+/* =========================================
+   CONTROLES JANELA
+========================================= */
+
+.home-window-controls{
+
+    display:flex;
+
+    gap:7px;
+
+}
+
+
+.home-window-controls span{
+
+    width:17px;
+
+    height:17px;
+
+    display:block;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+    border-radius:50%;
+
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.home-hero{
+
+    min-height:570px;
+
+    padding:60px;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.25fr)
+        minmax(260px,.75fr);
+
+    align-items:center;
+
+    gap:70px;
+
+    background:
+
+        radial-gradient(
+            circle at 82% 42%,
+            rgba(108,85,255,.13),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            rgba(116,201,255,.18),
+            rgba(108,85,255,.14)
+        );
+
+}
+
+
+.home-hero-content{
+
+    min-width:0;
+
+}
+
+
+.home-hero h1{
+
+    max-width:720px;
+
+    color:var(--azul-escuro);
+
+    font-size:
+        clamp(48px,6vw,82px);
+
+    line-height:1;
+
+    letter-spacing:-4px;
+
+}
+
+
+.home-hero h1 span{
+
+    display:block;
+
+    color:var(--roxo);
+
+}
+
+
+.home-description{
+
+    max-width:650px;
+
+    margin:25px 0 32px;
+
+    color:#515a73;
+
+    font-size:17px;
+
+    line-height:1.75;
+
+}
+
+
+.home-hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+
+.home-secondary-button{
+
+    min-height:49px;
+
+    padding:15px 20px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:white;
+
+    color:var(--azul-escuro);
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        4px 4px 0 var(--borda);
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:8px;
+
+    text-decoration:none;
+
+    transition:.15s;
+
+}
+
+
+.home-secondary-button:hover{
+
+    transform:
+        translate(2px,2px);
+
+    box-shadow:
+        2px 2px 0 var(--borda);
+
+}
+
+
+
+/* =========================================
+   TERMÔMETRO DE PROGRESSO
+========================================= */
+
+.home-progress-visual{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.home-small-label{
+
+    margin-bottom:22px;
+
+    color:var(--roxo-escuro);
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:7px;
+
+}
+
+
+.home-thermometer{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.home-thermometer-scale{
+
+    height:300px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    color:#656d84;
+
+    font-size:10px;
+
+}
+
+
+.home-thermometer-body{
+
+    position:relative;
+
+    width:90px;
+
+    height:350px;
+
+}
+
+
+.home-thermometer-tube{
+
+    position:absolute;
+
+    top:0;
+
+    left:24px;
+
+    width:43px;
+
+    height:285px;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:5px solid var(--borda);
+
+    border-radius:
+        25px 25px 8px 8px;
+
+}
+
+
+.home-thermometer-liquid{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:4%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            var(--roxo-claro),
+            var(--roxo)
+        );
+
+    transition:
+        height .6s ease;
+
+}
+
+
+.home-thermometer-bulb{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:6px;
+
+    width:79px;
+
+    height:79px;
+
+    background:var(--roxo);
+
+    border:5px solid var(--borda);
+
+    border-radius:50%;
+
+}
+
+
+.home-course-percentage{
+
+    margin-top:15px;
+
+    color:var(--roxo);
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:22px;
+
+}
+
+
+.home-progress-caption{
+
+    margin-top:10px;
+
+    color:#6d748a;
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:6px;
+
+}
+
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.home-status-grid{
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:
+        .7fr
+        1.6fr
+        1fr
+        1fr;
+
+    gap:18px;
+
+}
+
+
+.home-stat-card{
+
+    min-width:0;
+
+    min-height:135px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        4px 4px 0 var(--borda);
+
+}
+
+
+.home-stat-label{
+
+    margin-bottom:11px;
+
+    color:#687087;
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:6px;
+
+}
+
+
+.home-stat-card > strong{
+
+    color:var(--azul-escuro);
+
+    font-size:28px;
+
+}
+
+
+.home-stat-card p{
+
+    margin-top:6px;
+
+    color:#747b90;
+
+    font-size:11px;
+
+}
+
+
+.home-xp-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:14px;
+
+}
+
+
+.home-xp-heading strong{
+
+    color:var(--azul-escuro);
+
+}
+
+
+.home-xp-bar{
+
+    height:22px;
+
+    overflow:hidden;
+
+    background:#dfe4f2;
+
+    border:2px solid var(--borda);
+
+}
+
+
+.home-xp-fill{
+
+    width:0;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--azul-claro),
+            var(--roxo)
+        );
+
+    transition:
+        width .5s ease;
+
+}
+
+
+
+/* =========================================
+   CONTINUAR
+========================================= */
+
+.continue-panel{
+
+    padding:32px;
+
+    display:grid;
+
+    grid-template-columns:
+        100px
+        minmax(0,1fr)
+        auto;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+
+.continue-icon{
+
+    position:relative;
+
+    width:80px;
+
+    height:70px;
+
+    display:flex;
+
+    gap:3px;
+
+}
+
+
+.continue-book-left,
+.continue-book-right{
+
+    width:38px;
+
+    height:58px;
+
+    margin-top:6px;
+
+    background:#e8e5ff;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.continue-book-left{
+
+    transform:
+        skewY(-7deg);
+
+}
+
+
+.continue-book-right{
+
+    transform:
+        skewY(7deg);
+
+}
+
+
+.continue-info{
+
+    min-width:0;
+
+}
+
+
+.continue-phase{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#72798f;
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:6px;
+
+}
+
+
+.continue-phase strong{
+
+    color:var(--roxo);
+
+}
+
+
+.continue-info h2{
+
+    margin-bottom:7px;
+
+    color:var(--azul-escuro);
+
+    font-size:27px;
+
+}
+
+
+.continue-info > p:last-child{
+
+    max-width:650px;
+
+    color:#5d657c;
+
+    line-height:1.6;
+
+}
+
+
+.continue-button{
+
+    white-space:nowrap;
+
+}
+
+
+
+/* =========================================
+   PROGRAMAS
+========================================= */
+
+.home-program-grid{
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:22px;
+
+}
+
+
+.home-program{
+
+    position:relative;
+
+    min-width:0;
+
+    min-height:270px;
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    overflow:hidden;
+
+    background:white;
+
+    color:var(--texto);
+
+    border:2px solid var(--borda);
+
+    box-shadow:
+        5px 5px 0 var(--borda);
+
+    text-decoration:none;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+}
+
+
+.home-program:hover{
+
+    transform:
+        translateY(-6px);
+
+    background:#f2efff;
+
+}
+
+
+.home-program-code{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    color:var(--roxo-escuro);
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:5px;
+
+}
+
+
+.home-program h2{
+
+    margin-bottom:8px;
+
+    color:var(--azul-escuro);
+
+    font-size:21px;
+
+}
+
+
+.home-program p{
+
+    color:#626980;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+
+.home-open{
+
+    margin-top:auto;
+
+    padding-top:18px;
+
+    color:var(--roxo-escuro);
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:6px;
+
+}
+
+
+
+/* =========================================
+   ÍCONES PROGRAMAS
+========================================= */
+
+.home-program-icon{
+
+    position:relative;
+
+    width:58px;
+
+    height:58px;
+
+    margin-bottom:17px;
+
+    transition:
+        transform .2s ease;
+
+}
+
+
+.home-program:hover
+.home-program-icon{
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* LIVRO */
+
+.program-book{
+
+    display:flex;
+
+    gap:3px;
+
+}
+
+
+.program-book span{
+
+    flex:1;
+
+    height:49px;
+
+    margin-top:4px;
+
+    background:#e9e6ff;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.program-book span:first-child{
+
+    transform:skewY(-7deg);
+
+}
+
+
+.program-book span:last-child{
+
+    transform:skewY(7deg);
+
+}
+
+
+/* ESCALAS */
+
+.program-scale{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    gap:5px;
+
+}
+
+
+.scale-line{
+
+    display:block;
+
+    width:12px;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.s1{
+
+    height:30px;
+
+    background:#e5f4ff;
+
+}
+
+
+.s2{
+
+    height:46px;
+
+    background:#dcd7ff;
+
+}
+
+
+.s3{
+
+    height:56px;
+
+    background:var(--roxo);
+
+}
+
+
+/* LAB */
+
+.lab-neck{
+
+    position:absolute;
+
+    width:19px;
+
+    height:24px;
+
+    top:1px;
+
+    left:20px;
+
+    background:white;
+
+    border:
+        3px solid var(--borda);
+
+    border-bottom:none;
+
+}
+
+
+.lab-body{
+
+    position:absolute;
+
+    width:49px;
+
+    height:39px;
+
+    left:5px;
+
+    bottom:1px;
+
+    background:#eef6ff;
+
+    border:
+        3px solid var(--borda);
+
+    clip-path:
+        polygon(
+            22% 0,
+            78% 0,
+            100% 100%,
+            0 100%
+        );
+
+}
+
+
+.lab-liquid{
+
+    position:absolute;
+
+    width:35px;
+
+    height:12px;
+
+    left:12px;
+
+    bottom:7px;
+
+    background:var(--roxo);
+
+}
+
+
+/* QUESTÕES */
+
+.program-questions{
+
+    padding:7px 6px;
+
+    background:#f8f8ff;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.program-questions span{
+
+    display:block;
+
+    height:5px;
+
+    margin:6px 0;
+
+    background:var(--roxo);
+
+}
+
+
+/* PROVA */
+
+.exam-page{
+
+    position:absolute;
+
+    width:41px;
+
+    height:53px;
+
+    left:5px;
+
+    top:0;
+
+    background:white;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.exam-check{
+
+    position:absolute;
+
+    width:23px;
+
+    height:12px;
+
+    right:2px;
+
+    bottom:7px;
+
+    border-left:
+        5px solid var(--roxo);
+
+    border-bottom:
+        5px solid var(--roxo);
+
+    transform:
+        rotate(-45deg);
+
+}
+
+
+/* VÍDEO */
+
+.video-screen-home{
+
+    position:absolute;
+
+    width:58px;
+
+    height:42px;
+
+    top:5px;
+
+    background:#e9e6ff;
+
+    border:3px solid var(--borda);
+
+}
+
+
+.video-triangle-home{
+
+    position:absolute;
+
+    top:17px;
+
+    left:24px;
+
+    width:0;
+
+    height:0;
+
+    border-top:
+        9px solid transparent;
+
+    border-bottom:
+        9px solid transparent;
+
+    border-left:
+        15px solid var(--roxo);
+
+}
+
+
+/* PERFIL */
+
+.profile-head{
+
+    position:absolute;
+
+    width:23px;
+
+    height:23px;
+
+    top:1px;
+
+    left:18px;
+
+    background:#ece9ff;
+
+    border:3px solid var(--borda);
+
+    border-radius:50%;
+
+}
+
+
+.profile-body{
+
+    position:absolute;
+
+    width:45px;
+
+    height:30px;
+
+    bottom:1px;
+
+    left:7px;
+
+    background:#ece9ff;
+
+    border:3px solid var(--borda);
+
+    border-radius:
+        24px 24px 5px 5px;
+
+}
+
+
+
+/* =========================================
+   RESUMO
+========================================= */
+
+.home-overview{
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+}
+
+
+.home-overview > div{
+
+    min-height:120px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+}
+
+
+.home-overview-label{
+
+    margin-bottom:12px;
+
+    color:#687087;
+
+    font-family:
+        'Press Start 2P',
+        monospace;
+
+    font-size:6px;
+
+}
+
+
+.home-overview strong{
+
+    color:var(--azul-escuro);
+
+    font-size:27px;
+
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.home-footer{
+
+    padding:
+        10px 4px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    color:#cdd4ee;
+
+    font-size:10px;
+
+}
+
+
+.home-footer a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes homeStarPulse{
+
+    from{
+
+        opacity:.2;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:.85;
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+
+@keyframes homeCloudMove{
+
+    from{
+
+        transform:
+            translateX(0);
+
+    }
+
+    to{
+
+        transform:
+            translateX(135vw);
+
+    }
+
+}
+
+
+@keyframes homeCloudMoveReverse{
+
+    from{
+
+        transform:
+            translateX(0);
+
+    }
+
+    to{
+
+        transform:
+            translateX(-135vw);
+
+    }
+
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:950px){
+
+    .home-hero{
+
+        grid-template-columns:
+            minmax(0,1fr);
+
+        text-align:center;
+
+    }
+
+
+    .home-hero-content{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+    .home-progress-visual{
+
+        margin-top:10px;
+
+    }
+
+
+    .home-status-grid{
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .home-program-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width:600px){
+
+    .home-hero{
+
+        min-height:auto;
+
+        padding:38px 20px;
+
+        gap:38px;
+
+    }
+
+
+    .home-hero h1{
+
+        font-size:42px;
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .home-description{
+
+        font-size:14px;
+
+    }
+
+
+    .home-hero-actions{
+
+        width:100%;
+
+        flex-direction:column;
+
+    }
+
+
+    .home-hero-actions a{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+
+    .home-thermometer{
+
+        transform:scale(.83);
+
+        margin:
+            -20px 0;
+
+    }
+
+
+    .home-status-grid{
+
+        padding:15px;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:12px;
+
+    }
+
+
+    .home-stat-card{
+
+        min-width:0;
+
+        min-height:110px;
+
+        padding:15px;
+
+    }
+
+
+    .home-xp-card{
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .continue-panel{
+
+        padding:22px 18px;
+
+        grid-template-columns:
+            minmax(0,1fr);
+
+        text-align:center;
+
+    }
+
+
+    .continue-icon{
+
+        margin:auto;
+
+    }
+
+
+    .continue-button{
+
+        width:100%;
+
+    }
+
+
+    .home-program-grid{
+
+        padding:15px;
+
+        grid-template-columns:
+            minmax(0,1fr);
+
+        gap:17px;
+
+    }
+
+
+    .home-program{
+
+        width:100%;
+
+        min-width:0;
+
+        min-height:235px;
+
+    }
+
+
+    .home-overview{
+
+        padding:15px;
+
+        grid-template-columns:
+            minmax(0,1fr);
+
+    }
+
+
+    .home-footer{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width:360px){
+
+    .home-hero h1{
+
+        font-size:35px;
+
+    }
+
+
+    .home-status-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .home-xp-card{
+
+        grid-column:auto;
+
+    }
+
+}

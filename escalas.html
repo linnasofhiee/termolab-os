@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Conversor | TermoLab OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/escalas.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <main class="sistema">
+
+
+        <!-- =====================================
+             CABEÇALHO
+        ====================================== -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    SCALE_CONVERTER.EXE
+                </span>
+
+                <a
+                    href="index.html"
+                    class="voltar"
+                >
+                    ← HOME
+                </a>
+
+            </div>
+
+
+            <div class="escalas-hero">
+
+                <div>
+
+                    <p class="mensagem-sistema">
+                        CONVERSION SYSTEM_
+                    </p>
+
+                    <h1>
+                        Conversor de
+                        <span>Escalas</span>
+                    </h1>
+
+                    <p>
+                        Converta entre Celsius, Fahrenheit e Kelvin,
+                        veja a fórmula correta e acompanhe a resolução
+                        passo a passo.
+                    </p>
+
+                </div>
+
+
+                <div class="icone-escalas" aria-hidden="true">
+
+                    <div class="escala-vertical e-a"></div>
+                    <div class="escala-vertical e-b"></div>
+                    <div class="escala-vertical e-c"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CONVERSOR
+        ====================================== -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    INPUT_DATA
+                </span>
+
+            </div>
+
+
+            <div class="conversor-grid">
+
+
+                <div class="campo-conversor">
+
+                    <label for="valorTemperatura">
+                        VALOR
+                    </label>
+
+                    <input
+                        type="number"
+                        id="valorTemperatura"
+                        placeholder="Ex: 25"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <div class="campo-conversor">
+
+                    <label for="escalaOrigem">
+                        DE
+                    </label>
+
+                    <select id="escalaOrigem">
+
+                        <option value="celsius">
+                            Celsius °C
+                        </option>
+
+                        <option value="fahrenheit">
+                            Fahrenheit °F
+                        </option>
+
+                        <option value="kelvin">
+                            Kelvin K
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo-conversor">
+
+                    <label for="escalaDestino">
+                        PARA
+                    </label>
+
+                    <select id="escalaDestino">
+
+                        <option value="fahrenheit">
+                            Fahrenheit °F
+                        </option>
+
+                        <option value="celsius">
+                            Celsius °C
+                        </option>
+
+                        <option value="kelvin">
+                            Kelvin K
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="botaoConverter"
+                    class="botao-retro"
+                >
+                    CONVERTER
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             RESULTADO E FÓRMULA
+        ====================================== -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    CONVERSION_OUTPUT
+                </span>
+
+            </div>
+
+
+            <div class="resultado-conversao">
+
+
+                <div class="resultado-principal">
+
+                    <span class="titulo-pequeno">
+                        RESULTADO
+                    </span>
+
+                    <strong id="resultadoPrincipal">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="formula-atual">
+
+                    <span class="titulo-pequeno">
+                        FÓRMULA UTILIZADA
+                    </span>
+
+                    <strong id="formulaAtual">
+                        Selecione uma conversão.
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                class="passo-a-passo"
+                id="passoAPasso"
+            >
+
+                Digite um valor para visualizar
+                a resolução passo a passo.
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             COMPARAÇÃO DAS TRÊS ESCALAS
+        ====================================== -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    SCALE_COMPARISON
+                </span>
+
+            </div>
+
+
+            <div class="comparador-triplo">
+
+
+                <div class="comparacao-card">
+
+                    <span class="sigla-comparacao">
+                        °C
+                    </span>
+
+                    <span>
+                        CELSIUS
+                    </span>
+
+                    <strong id="comparacaoCelsius">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="comparacao-card">
+
+                    <span class="sigla-comparacao">
+                        K
+                    </span>
+
+                    <span>
+                        KELVIN
+                    </span>
+
+                    <strong id="comparacaoKelvin">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="comparacao-card">
+
+                    <span class="sigla-comparacao">
+                        °F
+                    </span>
+
+                    <span>
+                        FAHRENHEIT
+                    </span>
+
+                    <strong id="comparacaoFahrenheit">
+                        --
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             REFERÊNCIAS REAIS
+        ====================================== -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    REAL_WORLD_REFERENCES
+                </span>
+
+            </div>
+
+
+            <div class="referencias-cabecalho">
+
+                <p class="mensagem-sistema">
+                    REFERENCE POINTS_
+                </p>
+
+                <h2>
+                    Temperaturas de referência
+                </h2>
+
+                <p>
+                    Compare valores conhecidos do cotidiano
+                    nas três escalas.
+                </p>
+
+            </div>
+
+
+            <div class="referencias-grid">
+
+
+                <button
+                    class="referencia-card"
+                    data-celsius="0"
+                >
+
+                    <div class="ref-icone ref-gelo"></div>
+
+                    <strong>
+                        Gelo / fusão da água
+                    </strong>
+
+                    <span>
+                        0 °C
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="referencia-card"
+                    data-celsius="25"
+                >
+
+                    <div class="ref-icone ref-ambiente"></div>
+
+                    <strong>
+                        Temperatura ambiente
+                    </strong>
+
+                    <span>
+                        25 °C
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="referencia-card"
+                    data-celsius="37"
+                >
+
+                    <div class="ref-icone ref-corpo"></div>
+
+                    <strong>
+                        Corpo humano
+                    </strong>
+
+                    <span>
+                        37 °C
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="referencia-card"
+                    data-celsius="100"
+                >
+
+                    <div class="ref-icone ref-ebulicao"></div>
+
+                    <strong>
+                        Ebulição da água
+                    </strong>
+
+                    <span>
+                        100 °C
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <div
+                class="referencia-detalhe"
+                id="referenciaDetalhe"
+            >
+
+                <span>
+                    CLIQUE EM UMA REFERÊNCIA
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MINI TREINO
+        ====================================== -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    CONVERSION_TRAINING.EXE
+                </span>
+
+            </div>
+
+
+            <div class="treino-conteudo">
+
+
+                <div class="treino-topo">
+
+                    <div>
+
+                        <p class="mensagem-sistema">
+                            MINI CHALLENGE_
+                        </p>
+
+                        <h2>
+                            Treino de conversões
+                        </h2>
+
+                        <p>
+                            Resolva a conversão e ganhe XP
+                            quando acertar uma nova questão.
+                        </p>
+
+                    </div>
+
+
+                    <div class="treino-xp">
+
+                        <span>
+                            RECOMPENSA
+                        </span>
+
+                        <strong>
+                            +10 XP
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="questao-treino">
+
+                    <p id="perguntaTreino">
+                        Carregando questão...
+                    </p>
+
+
+                    <div class="resposta-treino">
+
+                        <input
+                            type="number"
+                            id="respostaTreino"
+                            step="any"
+                            placeholder="Digite sua resposta"
+                        >
+
+                        <span id="unidadeTreino">
+                            °C
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="verificarTreino"
+                        class="botao-retro"
+                    >
+                        VERIFICAR
+                    </button>
+
+
+                    <p
+                        class="feedback-treino"
+                        id="feedbackTreino"
+                    ></p>
+
+
+                    <button
+                        type="button"
+                        id="novaQuestao"
+                        class="botao-secundario"
+                    >
+                        NOVA QUESTÃO
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/escalas.js"></script>
+
+</body>
+
+</html>

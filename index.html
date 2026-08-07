@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TermoLab OS | Termometria Interativa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- FUNDO DECORATIVO -->
+
+    <div
+        class="home-background"
+        aria-hidden="true"
+    >
+
+        <span class="home-star star-1"></span>
+        <span class="home-star star-2"></span>
+        <span class="home-star star-3"></span>
+        <span class="home-star star-4"></span>
+
+        <div class="home-cloud cloud-1"></div>
+        <div class="home-cloud cloud-2"></div>
+
+    </div>
+
+
+
+    <main class="sistema">
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="janela home-hero-window">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    TERMOLAB_OS.EXE
+                </span>
+
+
+                <div
+                    class="home-window-controls"
+                    aria-hidden="true"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="home-hero">
+
+
+                <!-- TEXTO -->
+
+                <div class="home-hero-content">
+
+
+                    <p class="mensagem-sistema">
+                        SYSTEM ONLINE_
+                    </p>
+
+
+                    <h1>
+
+                        Domine a
+                        <span>Termometria</span>
+
+                    </h1>
+
+
+                    <p class="home-description">
+
+                        Aprenda temperatura, termômetros,
+                        escalas Celsius, Fahrenheit e Kelvin
+                        através de teoria, simulações,
+                        conversões e desafios.
+
+                    </p>
+
+
+                    <div class="home-hero-actions">
+
+
+                        <a
+                            href="teoria.html"
+                            class="botao-retro"
+                            id="continuarEstudo"
+                        >
+                            CONTINUAR ESTUDANDO
+                        </a>
+
+
+                        <a
+                            href="laboratorio.html"
+                            class="home-secondary-button"
+                        >
+                            ABRIR LABORATÓRIO
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TERMÔMETRO DE PROGRESSO -->
+
+                <div class="home-progress-visual">
+
+
+                    <span class="home-small-label">
+                        COURSE STATUS
+                    </span>
+
+
+                    <div class="home-thermometer">
+
+
+                        <div class="home-thermometer-scale">
+
+                            <span>100%</span>
+                            <span>75%</span>
+                            <span>50%</span>
+                            <span>25%</span>
+                            <span>0%</span>
+
+                        </div>
+
+
+                        <div class="home-thermometer-body">
+
+
+                            <div class="home-thermometer-tube">
+
+                                <div
+                                    class="home-thermometer-liquid"
+                                    id="homeThermometerLiquid"
+                                ></div>
+
+                            </div>
+
+
+                            <div class="home-thermometer-bulb"></div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <strong
+                        class="home-course-percentage"
+                        id="homeCoursePercentage"
+                    >
+                        0%
+                    </strong>
+
+
+                    <span class="home-progress-caption">
+
+                        CURSO DE TERMOMETRIA
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             STATUS DO ESTUDANTE
+        ====================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    STUDENT_STATUS.EXE
+                </span>
+
+            </div>
+
+
+
+            <div class="home-status-grid">
+
+
+                <!-- NÍVEL -->
+
+                <article class="home-stat-card">
+
+                    <span class="home-stat-label">
+                        NÍVEL
+                    </span>
+
+                    <strong id="nivel">
+                        01
+                    </strong>
+
+                    <p>
+                        nível atual
+                    </p>
+
+                </article>
+
+
+
+                <!-- XP -->
+
+                <article class="home-stat-card home-xp-card">
+
+                    <div class="home-xp-heading">
+
+                        <span class="home-stat-label">
+                            EXPERIÊNCIA
+                        </span>
+
+                        <strong>
+
+                            <span id="xpAtual">
+                                0
+                            </span>
+
+                            /
+
+                            <span id="xpMaximo">
+                                100
+                            </span>
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="home-xp-bar">
+
+                        <div
+                            class="home-xp-fill"
+                            id="xpBarra"
+                        ></div>
+
+                    </div>
+
+
+                    <p>
+                        XP para o próximo nível
+                    </p>
+
+                </article>
+
+
+
+                <!-- AULAS -->
+
+                <article class="home-stat-card">
+
+                    <span class="home-stat-label">
+                        FASES
+                    </span>
+
+                    <strong id="homeAulas">
+                        0 / 8
+                    </strong>
+
+                    <p>
+                        concluídas
+                    </p>
+
+                </article>
+
+
+
+                <!-- PRECISÃO -->
+
+                <article class="home-stat-card">
+
+                    <span class="home-stat-label">
+                        PRECISÃO
+                    </span>
+
+                    <strong id="homePrecisao">
+                        0%
+                    </strong>
+
+                    <p>
+                        banco de questões
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             CONTINUE DE ONDE PAROU
+        ====================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    CONTINUE_LEARNING
+                </span>
+
+            </div>
+
+
+
+            <div class="continue-panel">
+
+
+                <div class="continue-icon" aria-hidden="true">
+
+                    <div class="continue-book-left"></div>
+                    <div class="continue-book-right"></div>
+
+                </div>
+
+
+
+                <div class="continue-info">
+
+
+                    <p class="mensagem-sistema">
+                        NEXT LESSON_
+                    </p>
+
+
+                    <span class="continue-phase">
+
+                        FASE
+                        <strong id="proximaFaseNumero">
+                            01
+                        </strong>
+
+                    </span>
+
+
+                    <h2 id="proximaFaseTitulo">
+                        Temperatura
+                    </h2>
+
+
+                    <p id="proximaFaseDescricao">
+
+                        Comece seu percurso aprendendo
+                        os conceitos fundamentais de temperatura.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <a
+                    href="teoria.html"
+                    class="botao-retro continue-button"
+                >
+                    ABRIR CURSO
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             PROGRAMAS
+        ====================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    INSTALLED_PROGRAMS
+                </span>
+
+            </div>
+
+
+
+            <div class="home-program-grid">
+
+
+
+                <!-- APRENDER -->
+
+                <a
+                    href="teoria.html"
+                    class="home-program"
+                >
+
+
+                    <div
+                        class="home-program-icon program-book"
+                        aria-hidden="true"
+                    >
+
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="home-program-text">
+
+                        <span class="home-program-code">
+                            01.LEARN
+                        </span>
+
+                        <h2>
+                            Aprender
+                        </h2>
+
+                        <p>
+                            Curso interativo de Termometria
+                            com exemplos da vida real.
+                        </p>
+
+                    </div>
+
+
+                    <span class="home-open">
+                        OPEN.EXE →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- CONVERSOR -->
+
+                <a
+                    href="escalas.html"
+                    class="home-program"
+                >
+
+
+                    <div
+                        class="home-program-icon program-scale"
+                        aria-hidden="true"
+                    >
+
+                        <span class="scale-line s1"></span>
+                        <span class="scale-line s2"></span>
+                        <span class="scale-line s3"></span>
+
+                    </div>
+
+
+                    <div class="home-program-text">
+
+                        <span class="home-program-code">
+                            02.CONVERT
+                        </span>
+
+                        <h2>
+                            Conversor
+                        </h2>
+
+                        <p>
+                            Converta Celsius, Fahrenheit
+                            e Kelvin com resolução passo a passo.
+                        </p>
+
+                    </div>
+
+
+                    <span class="home-open">
+                        OPEN.EXE →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- LAB -->
+
+                <a
+                    href="laboratorio.html"
+                    class="home-program"
+                >
+
+
+                    <div
+                        class="home-program-icon program-lab"
+                        aria-hidden="true"
+                    >
+
+                        <span class="lab-neck"></span>
+                        <span class="lab-body"></span>
+                        <span class="lab-liquid"></span>
+
+                    </div>
+
+
+                    <div class="home-program-text">
+
+                        <span class="home-program-code">
+                            03.LAB
+                        </span>
+
+                        <h2>
+                            Laboratório
+                        </h2>
+
+                        <p>
+                            Explore temperaturas,
+                            termômetros e situações cotidianas.
+                        </p>
+
+                    </div>
+
+
+                    <span class="home-open">
+                        OPEN.EXE →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- QUESTÕES -->
+
+                <a
+                    href="questoes.html"
+                    class="home-program"
+                >
+
+
+                    <div
+                        class="home-program-icon program-questions"
+                        aria-hidden="true"
+                    >
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="home-program-text">
+
+                        <span class="home-program-code">
+                            04.PRACTICE
+                        </span>
+
+                        <h2>
+                            Questões
+                        </h2>
+
+                        <p>
+                            Exercícios por dificuldade
+                            e modo simulado.
+                        </p>
+
+                    </div>
+
+
+                    <span class="home-open">
+                        OPEN.EXE →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- PROVAS -->
+
+                <a
+                    href="questoes.html#vestibulares"
+                    class="home-program"
+                >
+
+
+                    <div
+                        class="home-program-icon program-exam"
+                        aria-hidden="true"
+                    >
+
+                        <span class="exam-page"></span>
+                        <span class="exam-check"></span>
+
+                    </div>
+
+
+                    <div class="home-program-text">
+
+                        <span class="home-program-code">
+                            05.EXAMS
+                        </span>
+
+                        <h2>
+                            Vestibulares
+                        </h2>
+
+                        <p>
+                            Questões no estilo ENEM,
+                            Fuvest e Unicamp.
+                        </p>
+
+                    </div>
+
+
+                    <span class="home-open">
+                        OPEN.EXE →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- VÍDEOS -->
+
+                <a
+                    href="videos.html"
+                    class="home-program"
+                >
+
+
+                    <div
+                        class="home-program-icon program-video"
+                        aria-hidden="true"
+                    >
+
+                        <span class="video-screen-home"></span>
+                        <span class="video-triangle-home"></span>
+
+                    </div>
+
+
+                    <div class="home-program-text">
+
+                        <span class="home-program-code">
+                            06.MEDIA
+                        </span>
+
+                        <h2>
+                            Videoaulas
+                        </h2>
+
+                        <p>
+                            Biblioteca organizada
+                            por assunto de Termometria.
+                        </p>
+
+                    </div>
+
+
+                    <span class="home-open">
+                        OPEN.EXE →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- PERFIL -->
+
+                <a
+                    href="perfil.html"
+                    class="home-program home-profile-program"
+                >
+
+
+                    <div
+                        class="home-program-icon program-profile"
+                        aria-hidden="true"
+                    >
+
+                        <span class="profile-head"></span>
+                        <span class="profile-body"></span>
+
+                    </div>
+
+
+                    <div class="home-program-text">
+
+                        <span class="home-program-code">
+                            07.PROFILE
+                        </span>
+
+                        <h2>
+                            Perfil
+                        </h2>
+
+                        <p>
+                            Veja XP, nível, desempenho
+                            e conquistas.
+                        </p>
+
+                    </div>
+
+
+                    <span class="home-open">
+                        OPEN.EXE →
+                    </span>
+
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             RESUMO
+        ====================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    SYSTEM_OVERVIEW.TXT
+                </span>
+
+            </div>
+
+
+
+            <div class="home-overview">
+
+
+                <div>
+
+                    <span class="home-overview-label">
+                        QUESTÕES RESPONDIDAS
+                    </span>
+
+                    <strong id="homeQuestoes">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="home-overview-label">
+                        QUESTÕES CORRETAS
+                    </span>
+
+                    <strong id="homeAcertos">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="home-overview-label">
+                        TREINOS DE CONVERSÃO
+                    </span>
+
+                    <strong id="homeConversoes">
+                        0 / 6
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <footer class="home-footer">
+
+            <span>
+                TERMOLAB OS v3.0
+            </span>
+
+            <span>
+                TERMOMETRIA INTERATIVA
+            </span>
+
+            <a href="sobre.html">
+                SOBRE O PROJETO
+            </a>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

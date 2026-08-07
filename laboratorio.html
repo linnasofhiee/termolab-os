@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Laboratório | TermoLab OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laboratorio.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="sistema">
+
+
+        <!-- ==================================
+             CABEÇALHO
+        =================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    THERMOMETRY_LAB.EXE
+                </span>
+
+                <a
+                    href="index.html"
+                    class="voltar"
+                >
+                    ← HOME
+                </a>
+
+            </div>
+
+
+            <div class="lab-hero">
+
+
+                <div>
+
+                    <p class="mensagem-sistema">
+                        INTERACTIVE LAB_
+                    </p>
+
+
+                    <h1>
+                        Experimente a
+                        <span>Termometria</span>
+                    </h1>
+
+
+                    <p>
+
+                        Altere temperaturas, compare escalas
+                        e explore situações reais em que
+                        medimos temperatura no cotidiano.
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="icone-termometro-grande"
+                    aria-hidden="true"
+                >
+
+                    <div class="termometro-linha"></div>
+
+                    <div class="termometro-carga"></div>
+
+                    <div class="termometro-circulo"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             SIMULADOR PRINCIPAL
+        =================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    TEMPERATURE_SIMULATOR
+                </span>
+
+            </div>
+
+
+            <div class="simulador-principal">
+
+
+                <!-- PARTÍCULAS -->
+
+                <div class="painel-simulacao">
+
+
+                    <span class="titulo-pequeno">
+                        REPRESENTAÇÃO MICROSCÓPICA
+                    </span>
+
+
+                    <div
+                        class="caixa-particulas"
+                        id="caixaParticulas"
+                    >
+
+                        <span class="particula part1"></span>
+                        <span class="particula part2"></span>
+                        <span class="particula part3"></span>
+                        <span class="particula part4"></span>
+                        <span class="particula part5"></span>
+                        <span class="particula part6"></span>
+                        <span class="particula part7"></span>
+                        <span class="particula part8"></span>
+                        <span class="particula part9"></span>
+
+                    </div>
+
+
+                    <p
+                        class="estado-sistema"
+                        id="estadoSistema"
+                    >
+                        TEMPERATURA MODERADA
+                    </p>
+
+                </div>
+
+
+
+                <!-- TERMÔMETRO -->
+
+                <div class="painel-termometro">
+
+
+                    <span class="titulo-pequeno">
+                        TERMÔMETRO
+                    </span>
+
+
+                    <div class="termometro">
+
+
+                        <div class="marcacoes">
+
+                            <span>100</span>
+                            <span>75</span>
+                            <span>50</span>
+                            <span>25</span>
+                            <span>0</span>
+                            <span>-25</span>
+                            <span>-50</span>
+
+                        </div>
+
+
+                        <div class="termometro-corpo">
+
+
+                            <div class="termometro-tubo">
+
+                                <div
+                                    class="termometro-liquido"
+                                    id="termometroLiquido"
+                                ></div>
+
+                            </div>
+
+
+                            <div class="termometro-bulbo">
+
+                                <div
+                                    class="bulbo-liquido"
+                                    id="bulboLiquido"
+                                ></div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CONTROLE -->
+
+            <div class="controle-lab">
+
+
+                <div class="temperatura-display">
+
+                    <strong id="temperaturaAtual">
+                        25
+                    </strong>
+
+                    <span>
+                        °C
+                    </span>
+
+                </div>
+
+
+                <div class="slider-area">
+
+
+                    <span>
+                        -50 °C
+                    </span>
+
+
+                    <input
+                        type="range"
+                        id="sliderTemperatura"
+                        min="-50"
+                        max="100"
+                        value="25"
+                        step="1"
+                        aria-label="Temperatura em Celsius"
+                    >
+
+
+                    <span>
+                        100 °C
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================
+             CONVERSÃO AUTOMÁTICA
+        =================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    SCALE_MONITOR
+                </span>
+
+            </div>
+
+
+            <div class="comparacao-escalas">
+
+
+                <div class="escala-lab">
+
+                    <span class="escala-simbolo">
+                        °C
+                    </span>
+
+                    <span class="escala-nome">
+                        CELSIUS
+                    </span>
+
+                    <strong id="labCelsius">
+                        25 °C
+                    </strong>
+
+                </div>
+
+
+                <div class="escala-lab">
+
+                    <span class="escala-simbolo">
+                        K
+                    </span>
+
+                    <span class="escala-nome">
+                        KELVIN
+                    </span>
+
+                    <strong id="labKelvin">
+                        298,15 K
+                    </strong>
+
+                </div>
+
+
+                <div class="escala-lab">
+
+                    <span class="escala-simbolo">
+                        °F
+                    </span>
+
+                    <span class="escala-nome">
+                        FAHRENHEIT
+                    </span>
+
+                    <strong id="labFahrenheit">
+                        77 °F
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             EXPLICAÇÃO
+        =================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    SIMULATION_INFO.TXT
+                </span>
+
+            </div>
+
+
+            <div class="explicacao-simulacao">
+
+
+                <p class="mensagem-sistema">
+                    OBSERVATION_
+                </p>
+
+
+                <h2 id="tituloExplicacao">
+                    Temperatura moderada
+                </h2>
+
+
+                <p id="textoExplicacao">
+
+                    A temperatura selecionada está em uma faixa
+                    próxima das condições encontradas em muitos
+                    ambientes cotidianos.
+
+                </p>
+
+
+                <div class="formula-simulacao">
+
+                    <div>
+
+                        <span>
+                            CELSIUS → KELVIN
+                        </span>
+
+                        <strong>
+                            K = °C + 273,15
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            CELSIUS → FAHRENHEIT
+                        </span>
+
+                        <strong>
+                            °F = (°C × 9/5) + 32
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             TERMOMETRIA NA VIDA REAL
+        =================================== -->
+
+        <section class="janela">
+
+
+            <div class="barra-janela">
+
+                <span>
+                    REAL_WORLD.EXE
+                </span>
+
+            </div>
+
+
+            <div class="cotidiano-cabecalho">
+
+                <p class="mensagem-sistema">
+                    SELECT SCENARIO_
+                </p>
+
+                <h2>
+                    Termometria no cotidiano
+                </h2>
+
+                <p>
+
+                    Escolha uma situação e descubra
+                    como a medição de temperatura
+                    aparece fora da sala de aula.
+
+                </p>
+
+            </div>
+
+
+            <div class="cenarios">
+
+
+                <!-- CORPO HUMANO -->
+
+                <button
+                    class="cenario-card ativo"
+                    data-cenario="corpo"
+                >
+
+                    <div class="cenario-icone icone-corpo">
+
+                        <span class="corpo-cabeca"></span>
+
+                        <span class="corpo-tronco"></span>
+
+                        <span class="sensor-clinico"></span>
+
+                    </div>
+
+                    <strong>
+                        Temperatura corporal
+                    </strong>
+
+                    <span>
+                        TERMÔMETRO CLÍNICO
+                    </span>
+
+                </button>
+
+
+
+                <!-- FREEZER -->
+
+                <button
+                    class="cenario-card"
+                    data-cenario="freezer"
+                >
+
+                    <div class="cenario-icone icone-freezer">
+
+                        <span class="freezer-caixa"></span>
+
+                        <span class="freezer-linha"></span>
+
+                        <span class="freezer-puxador"></span>
+
+                    </div>
+
+                    <strong>
+                        Freezer
+                    </strong>
+
+                    <span>
+                        BAIXA TEMPERATURA
+                    </span>
+
+                </button>
+
+
+
+                <!-- PREVISÃO -->
+
+                <button
+                    class="cenario-card"
+                    data-cenario="clima"
+                >
+
+                    <div class="cenario-icone icone-clima">
+
+                        <span class="sol-centro"></span>
+
+                        <span class="sol-raio r1"></span>
+                        <span class="sol-raio r2"></span>
+                        <span class="sol-raio r3"></span>
+                        <span class="sol-raio r4"></span>
+
+                    </div>
+
+                    <strong>
+                        Previsão do tempo
+                    </strong>
+
+                    <span>
+                        TEMPERATURA DO AR
+                    </span>
+
+                </button>
+
+
+
+                <!-- FORNO -->
+
+                <button
+                    class="cenario-card"
+                    data-cenario="forno"
+                >
+
+                    <div class="cenario-icone icone-forno">
+
+                        <span class="forno-corpo"></span>
+
+                        <span class="forno-tela"></span>
+
+                        <span class="forno-controle c1"></span>
+
+                        <span class="forno-controle c2"></span>
+
+                    </div>
+
+                    <strong>
+                        Forno
+                    </strong>
+
+                    <span>
+                        ALTA TEMPERATURA
+                    </span>
+
+                </button>
+
+
+
+                <!-- GELO -->
+
+                <button
+                    class="cenario-card"
+                    data-cenario="gelo"
+                >
+
+                    <div class="cenario-icone icone-gelo">
+
+                        <span class="cubo-gelo"></span>
+
+                    </div>
+
+                    <strong>
+                        Água com gelo
+                    </strong>
+
+                    <span>
+                        REFERÊNCIA DE ESCALA
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- DETALHES DO CENÁRIO -->
+
+            <div class="cenario-detalhes">
+
+
+                <div class="cenario-display">
+
+
+                    <span class="titulo-pequeno">
+                        TEMPERATURA DE REFERÊNCIA
+                    </span>
+
+
+                    <strong id="cenarioTemperatura">
+                        37 °C
+                    </strong>
+
+
+                    <div class="cenario-escalas">
+
+                        <span id="cenarioKelvin">
+                            310,15 K
+                        </span>
+
+                        <span id="cenarioFahrenheit">
+                            98,6 °F
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="cenario-texto">
+
+
+                    <p class="mensagem-sistema">
+                        REAL WORLD INFO_
+                    </p>
+
+
+                    <h3 id="cenarioTitulo">
+                        Temperatura corporal
+                    </h3>
+
+
+                    <p id="cenarioDescricao">
+
+                        Termômetros clínicos são utilizados
+                        para medir a temperatura corporal.
+                        É necessário aguardar o tempo adequado
+                        para que o sensor realize a medição.
+
+                    </p>
+
+
+                    <div class="curiosidade">
+
+                        <span>
+                            OBSERVE
+                        </span>
+
+                        <p id="cenarioCuriosidade">
+
+                            Uma mesma temperatura corporal
+                            pode ser expressa em Celsius,
+                            Kelvin ou Fahrenheit.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/laboratorio.js"></script>
+
+
+</body>
+
+</html>

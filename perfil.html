@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Perfil | TermoLab OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <main class="sistema">
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    STUDENT_PROFILE.EXE
+                </span>
+
+                <a
+                    href="index.html"
+                    class="voltar"
+                >
+                    ← HOME
+                </a>
+
+            </div>
+
+
+            <div class="perfil-hero">
+
+                <div>
+
+                    <p class="mensagem-sistema">
+                        USER DATA_
+                    </p>
+
+                    <h1>
+                        Seu progresso no
+                        <span>TermoLab OS</span>
+                    </h1>
+
+                    <p>
+                        Acompanhe seu desenvolvimento em
+                        Termometria, XP conquistado e
+                        atividades concluídas.
+                    </p>
+
+                </div>
+
+
+                <div class="avatar-retro">
+
+                    <div class="avatar-cabeca"></div>
+
+                    <div class="avatar-corpo"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- XP -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    EXPERIENCE_STATUS
+                </span>
+
+            </div>
+
+
+            <div class="xp-painel">
+
+                <div class="nivel-grande">
+
+                    <span>
+                        NÍVEL
+                    </span>
+
+                    <strong id="nivelPerfil">
+                        01
+                    </strong>
+
+                </div>
+
+
+                <div class="xp-detalhes">
+
+                    <div class="xp-texto">
+
+                        <span>
+                            EXPERIÊNCIA
+                        </span>
+
+                        <strong>
+
+                            <span id="xpAtualPerfil">
+                                0
+                            </span>
+
+                            /
+
+                            <span id="xpMaximoPerfil">
+                                100
+                            </span>
+
+                            XP
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="barra-xp perfil-barra">
+
+                        <div
+                            class="xp-preenchimento"
+                            id="xpBarraPerfil"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTATÍSTICAS -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    LEARNING_STATS
+                </span>
+
+            </div>
+
+
+            <div class="estatisticas">
+
+                <div class="estatistica">
+
+                    <span>
+                        AULAS
+                    </span>
+
+                    <strong id="aulasConcluidas">
+                        0 / 8
+                    </strong>
+
+                    <p>
+                        fases concluídas
+                    </p>
+
+                </div>
+
+
+                <div class="estatistica">
+
+                    <span>
+                        QUESTÕES
+                    </span>
+
+                    <strong id="questoesRespondidas">
+                        0
+                    </strong>
+
+                    <p>
+                        respondidas
+                    </p>
+
+                </div>
+
+
+                <div class="estatistica">
+
+                    <span>
+                        ACERTOS
+                    </span>
+
+                    <strong id="questoesAcertadas">
+                        0
+                    </strong>
+
+                    <p>
+                        respostas corretas
+                    </p>
+
+                </div>
+
+
+                <div class="estatistica">
+
+                    <span>
+                        PRECISÃO
+                    </span>
+
+                    <strong id="precisaoPerfil">
+                        0%
+                    </strong>
+
+                    <p>
+                        taxa de acerto
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONQUISTAS -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    ACHIEVEMENTS.DAT
+                </span>
+
+            </div>
+
+
+            <div
+                class="conquistas"
+                id="conquistas"
+            ></div>
+
+        </section>
+
+
+        <!-- RESET -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    SYSTEM_SETTINGS
+                </span>
+
+            </div>
+
+
+            <div class="configuracoes">
+
+                <div>
+
+                    <h2>
+                        Reiniciar progresso
+                    </h2>
+
+                    <p>
+                        Apaga XP, aulas concluídas,
+                        questões respondidas e conquistas
+                        deste navegador.
+                    </p>
+
+                </div>
+
+                <button
+                    id="resetarProgresso"
+                    class="botao-perigo"
+                >
+                    RESETAR DADOS
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/perfil.js"></script>
+
+</body>
+
+</html>

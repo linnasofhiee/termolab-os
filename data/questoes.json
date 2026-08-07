@@ -1,0 +1,228 @@
+[
+    {
+        "id": "facil-01",
+        "categoria": "facil",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 10,
+        "enunciado": "Dois corpos estão em equilíbrio térmico. O que obrigatoriamente podemos afirmar sobre eles?",
+        "alternativas": [
+            "Possuem a mesma massa.",
+            "Possuem o mesmo volume.",
+            "Possuem a mesma temperatura.",
+            "São feitos do mesmo material."
+        ],
+        "correta": 2,
+        "explicacao": "Equilíbrio térmico significa que os sistemas apresentam a mesma temperatura."
+    },
+
+    {
+        "id": "facil-02",
+        "categoria": "facil",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 10,
+        "enunciado": "Qual é a forma correta de escrever uma temperatura na escala Kelvin?",
+        "alternativas": [
+            "300 °K",
+            "300 K",
+            "300 K°",
+            "300 °Kelvin"
+        ],
+        "correta": 1,
+        "explicacao": "A unidade kelvin é representada pela letra K sem símbolo de grau."
+    },
+
+    {
+        "id": "facil-03",
+        "categoria": "facil",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 10,
+        "enunciado": "Em condições padronizadas, o ponto de fusão da água corresponde aproximadamente a:",
+        "alternativas": [
+            "0 °C",
+            "32 °C",
+            "100 °C",
+            "273 °C"
+        ],
+        "correta": 0,
+        "explicacao": "Na escala Celsius, a fusão do gelo ocorre aproximadamente a 0 °C sob condições de referência."
+    },
+
+    {
+        "id": "facil-04",
+        "categoria": "facil",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 10,
+        "enunciado": "Uma temperatura de 0 °C corresponde aproximadamente a qual valor em Fahrenheit?",
+        "alternativas": [
+            "0 °F",
+            "20 °F",
+            "32 °F",
+            "100 °F"
+        ],
+        "correta": 2,
+        "explicacao": "Utilizando F = (C × 9/5) + 32, para C = 0 obtemos 32 °F."
+    },
+
+    {
+        "id": "medio-01",
+        "categoria": "medio",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 15,
+        "enunciado": "Qual temperatura em kelvin corresponde aproximadamente a 27 °C?",
+        "alternativas": [
+            "246,15 K",
+            "273,15 K",
+            "300,15 K",
+            "327,15 K"
+        ],
+        "correta": 2,
+        "explicacao": "K = C + 273,15. Portanto, 27 + 273,15 = 300,15 K."
+    },
+
+    {
+        "id": "medio-02",
+        "categoria": "medio",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 15,
+        "enunciado": "Uma temperatura de 68 °F corresponde a qual temperatura em Celsius?",
+        "alternativas": [
+            "10 °C",
+            "20 °C",
+            "32 °C",
+            "36 °C"
+        ],
+        "correta": 1,
+        "explicacao": "C = (F - 32) × 5/9. Assim, (68 - 32) × 5/9 = 20 °C."
+    },
+
+    {
+        "id": "medio-03",
+        "categoria": "medio",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 15,
+        "enunciado": "Um termômetro indica inicialmente 15 °C e depois 45 °C. Qual foi a variação de temperatura?",
+        "alternativas": [
+            "15 °C",
+            "30 °C",
+            "45 °C",
+            "60 °C"
+        ],
+        "correta": 1,
+        "explicacao": "A variação é ΔT = Tfinal - Tinicial = 45 - 15 = 30 °C. Uma variação de 30 °C também corresponde a 30 K."
+    },
+
+    {
+        "id": "medio-04",
+        "categoria": "medio",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 15,
+        "enunciado": "Uma temperatura de 300 K corresponde aproximadamente a:",
+        "alternativas": [
+            "-27 °C",
+            "0 °C",
+            "27 °C",
+            "300 °C"
+        ],
+        "correta": 2,
+        "explicacao": "C = K - 273,15. Assim, 300 - 273,15 é aproximadamente 26,85 °C."
+    },
+
+    {
+        "id": "dificil-01",
+        "categoria": "dificil",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 20,
+        "enunciado": "Uma escala X marca 20 °X para o ponto de fusão da água e 170 °X para o ponto de ebulição. Qual valor em X corresponde a 40 °C?",
+        "alternativas": [
+            "40 °X",
+            "60 °X",
+            "80 °X",
+            "100 °X"
+        ],
+        "correta": 2,
+        "explicacao": "A relação é (X - 20)/150 = C/100. Para C = 40, temos X - 20 = 60, resultando em X = 80 °X."
+    },
+
+    {
+        "id": "dificil-02",
+        "categoria": "dificil",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 20,
+        "enunciado": "Em determinada escala Y, 0 °C corresponde a 50 °Y e 100 °C corresponde a 250 °Y. Qual temperatura em Y corresponde a 25 °C?",
+        "alternativas": [
+            "75 °Y",
+            "100 °Y",
+            "125 °Y",
+            "150 °Y"
+        ],
+        "correta": 1,
+        "explicacao": "100 °C correspondem a uma variação de 200 °Y. Assim, 25 °C correspondem a 50 °Y de variação. Somando ao valor inicial 50 °Y, temos 100 °Y."
+    },
+
+    {
+        "id": "dificil-03",
+        "categoria": "dificil",
+        "origem": "BANCO DE QUESTÕES",
+        "xp": 20,
+        "enunciado": "Uma temperatura apresenta o mesmo valor numérico nas escalas Celsius e Fahrenheit. Qual é essa temperatura?",
+        "alternativas": [
+            "-40",
+            "0",
+            "32",
+            "100"
+        ],
+        "correta": 0,
+        "explicacao": "Igualando F = C na expressão F = 9C/5 + 32, obtemos C = -40. Portanto, -40 °C = -40 °F."
+    },
+
+    {
+        "id": "vest-01",
+        "categoria": "vestibulares",
+        "origem": "ESTILO ENEM",
+        "xp": 20,
+        "enunciado": "Um turista brasileiro consulta a previsão do tempo nos Estados Unidos e observa a indicação de 95 °F. Para compreender melhor essa temperatura, ele deseja convertê-la para Celsius. Qual é o valor aproximado?",
+        "alternativas": [
+            "25 °C",
+            "30 °C",
+            "35 °C",
+            "45 °C",
+            "63 °C"
+        ],
+        "correta": 2,
+        "explicacao": "C = (95 - 32) × 5/9 = 63 × 5/9 = 35 °C."
+    },
+
+    {
+        "id": "vest-02",
+        "categoria": "vestibulares",
+        "origem": "ESTILO FUVEST",
+        "xp": 25,
+        "enunciado": "Uma escala linear X atribui os valores 10 °X e 210 °X aos estados correspondentes a 0 °C e 100 °C. O valor nessa escala correspondente a 40 °C é:",
+        "alternativas": [
+            "50 °X",
+            "70 °X",
+            "90 °X",
+            "100 °X",
+            "110 °X"
+        ],
+        "correta": 2,
+        "explicacao": "A variação de 100 °C corresponde a 200 °X. Logo, 40 °C correspondem a 80 °X de variação. Somando o valor inicial 10 °X, temos 90 °X."
+    },
+
+    {
+        "id": "vest-03",
+        "categoria": "vestibulares",
+        "origem": "ESTILO UNICAMP",
+        "xp": 25,
+        "enunciado": "Um sensor registra inicialmente 293,15 K e depois 313,15 K. A variação de temperatura registrada em Celsius é:",
+        "alternativas": [
+            "10 °C",
+            "20 °C",
+            "40 °C",
+            "293 °C",
+            "313 °C"
+        ],
+        "correta": 1,
+        "explicacao": "A diferença é 313,15 - 293,15 = 20 K. Uma variação de 20 K tem o mesmo tamanho que uma variação de 20 °C."
+    }
+]

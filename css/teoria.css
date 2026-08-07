@@ -1,0 +1,716 @@
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.voltar{
+
+    color:var(--azul-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:8px;
+
+    text-decoration:none;
+
+}
+
+
+.teoria-hero{
+
+    min-height:350px;
+
+    padding:50px;
+
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    align-items:center;
+
+    gap:50px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(116,201,255,.17),
+            rgba(108,85,255,.15)
+        );
+
+}
+
+
+.teoria-hero h1{
+
+    max-width:700px;
+
+    color:var(--azul-escuro);
+
+    font-size:clamp(42px,6vw,72px);
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+    margin-bottom:20px;
+
+}
+
+
+.teoria-hero h1 span{
+
+    color:var(--roxo);
+
+}
+
+
+.teoria-hero > div:first-child > p:last-child{
+
+    max-width:620px;
+
+    color:#596078;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =====================================
+   MINI TERMÔMETRO
+===================================== */
+
+.mini-termometro{
+
+    position:relative;
+
+    width:90px;
+
+    height:240px;
+
+}
+
+
+.mini-tubo{
+
+    position:absolute;
+
+    top:0;
+
+    left:24px;
+
+    width:42px;
+
+    height:190px;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:5px solid var(--borda);
+
+    border-radius:24px 24px 8px 8px;
+
+}
+
+
+.mini-liquido{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:58%;
+
+    background:var(--roxo);
+
+    animation:liquidoEstudo 3s ease-in-out infinite alternate;
+
+}
+
+
+.mini-bulbo{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:8px;
+
+    width:74px;
+
+    height:74px;
+
+    background:var(--roxo);
+
+    border:5px solid var(--borda);
+
+    border-radius:50%;
+
+}
+
+
+
+/* =====================================
+   PROGRESSO
+===================================== */
+
+.curso-progresso{
+
+    padding:30px;
+
+}
+
+
+.curso-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+
+.curso-info span{
+
+    color:#686f86;
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:8px;
+
+}
+
+
+.curso-info strong{
+
+    color:var(--azul-escuro);
+
+    font-size:24px;
+
+}
+
+
+.barra-curso{
+
+    height:25px;
+
+    overflow:hidden;
+
+    background:#dfe4f2;
+
+    border:2px solid var(--borda);
+
+}
+
+
+.barra-curso-preenchimento{
+
+    width:0;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--azul-claro),
+            var(--roxo)
+        );
+
+    transition:width .5s ease;
+
+}
+
+
+.curso-progresso > p{
+
+    margin-top:12px;
+
+    color:#70768c;
+
+    font-size:13px;
+
+}
+
+
+
+/* =====================================
+   MAPA DE FASES
+===================================== */
+
+.mapa-fases{
+
+    padding:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+
+.fase{
+
+    min-height:245px;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:white;
+
+    border:2px solid var(--borda);
+
+    box-shadow:5px 5px 0 var(--borda);
+
+    transition:.2s;
+
+}
+
+
+.fase-disponivel:hover,
+.fase-concluida:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+.fase-topo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+
+.numero-fase{
+
+    color:var(--roxo);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:20px;
+
+}
+
+
+.status-fase{
+
+    padding:7px 9px;
+
+    background:#eeecff;
+
+    color:var(--roxo-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:6px;
+
+    border:1px solid var(--borda);
+
+}
+
+
+.fase h2{
+
+    color:var(--azul-escuro);
+
+    font-size:23px;
+
+    margin-bottom:10px;
+
+}
+
+
+.fase p{
+
+    color:#626980;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+
+.botao-fase{
+
+    margin-top:auto;
+
+    padding:12px 16px;
+
+    background:var(--roxo);
+
+    color:white;
+
+    border:2px solid var(--borda);
+
+    box-shadow:3px 3px 0 var(--borda);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+    cursor:pointer;
+
+}
+
+
+.botao-fase:hover{
+
+    transform:translate(2px,2px);
+
+    box-shadow:1px 1px 0 var(--borda);
+
+}
+
+
+.fase-bloqueada{
+
+    opacity:.48;
+
+    filter:grayscale(.5);
+
+}
+
+
+.fase-bloqueada .botao-fase{
+
+    background:#777d8e;
+
+    cursor:not-allowed;
+
+}
+
+
+.fase-concluida{
+
+    border-left:8px solid var(--azul-claro);
+
+}
+
+
+
+/* =====================================
+   AULA
+===================================== */
+
+.aula{
+
+    display:none;
+
+}
+
+
+.aula.aberta{
+
+    display:block;
+
+}
+
+
+.fechar-aula{
+
+    width:29px;
+
+    height:29px;
+
+    background:white;
+
+    color:var(--texto);
+
+    border:2px solid var(--borda);
+
+    border-radius:50%;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}
+
+
+.aula-conteudo{
+
+    padding:45px;
+
+}
+
+
+.aula-conteudo h2{
+
+    max-width:800px;
+
+    color:var(--azul-escuro);
+
+    font-size:clamp(34px,5vw,58px);
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+
+.texto-aula{
+
+    max-width:850px;
+
+    color:#515971;
+
+    line-height:1.85;
+
+    font-size:16px;
+
+}
+
+
+.texto-aula p{
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* =====================================
+   VIDA REAL
+===================================== */
+
+.cotidiano{
+
+    margin-top:35px;
+
+    padding:28px;
+
+    background:#eef7ff;
+
+    border:2px solid var(--borda);
+
+    box-shadow:5px 5px 0 rgba(17,23,44,.8);
+
+}
+
+
+.titulo-caixa{
+
+    display:block;
+
+    margin-bottom:18px;
+
+    color:var(--roxo-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+}
+
+
+.cotidiano h3{
+
+    color:var(--azul-escuro);
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+
+.cotidiano p{
+
+    color:#555d75;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =====================================
+   CONCEITO CHAVE
+===================================== */
+
+.conceito-chave{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    background:#eeebff;
+
+    border-left:7px solid var(--roxo);
+
+}
+
+
+.conceito-chave span{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--roxo-escuro);
+
+    font-family:'Press Start 2P',monospace;
+
+    font-size:7px;
+
+}
+
+
+.conceito-chave p{
+
+    color:#444b65;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =====================================
+   DESAFIO
+===================================== */
+
+.desafio-aula{
+
+    margin-top:45px;
+
+    padding-top:35px;
+
+    border-top:2px dashed #aab1c5;
+
+}
+
+
+.desafio-aula h3{
+
+    color:var(--azul-escuro);
+
+    font-size:23px;
+
+    margin-bottom:20px;
+
+}
+
+
+.alternativas-aula{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+.alternativa-aula{
+
+    width:100%;
+
+    padding:17px;
+
+    background:white;
+
+    color:var(--texto);
+
+    border:2px solid var(--borda);
+
+    text-align:left;
+
+    font-family:'Poppins',sans-serif;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.alternativa-aula:hover{
+
+    background:#f0eeff;
+
+}
+
+
+.alternativa-aula.correta{
+
+    background:#dff8ee;
+
+    border-color:#1c7d60;
+
+}
+
+
+.alternativa-aula.errada{
+
+    background:#ffe4ea;
+
+    border-color:#b8455f;
+
+}
+
+
+.feedback-aula{
+
+    min-height:45px;
+
+    margin:18px 0;
+
+    color:#4f566d;
+
+    font-weight:600;
+
+}
+
+
+#concluirAula:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+}
+
+
+
+/* =====================================
+   ANIMAÇÃO
+===================================== */
+
+@keyframes liquidoEstudo{
+
+    from{
+
+        height:48%;
+
+    }
+
+    to{
+
+        height:67%;
+
+    }
+
+}

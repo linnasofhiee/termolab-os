@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Videoaulas | TermoLab OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/videos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="sistema">
+
+
+        <!-- ======================================
+             CABEÇALHO
+        ======================================= -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    VIDEO_LIBRARY.EXE
+                </span>
+
+                <a
+                    href="index.html"
+                    class="voltar"
+                >
+                    ← HOME
+                </a>
+
+            </div>
+
+
+            <div class="videos-hero">
+
+
+                <div class="videos-hero-texto">
+
+                    <p class="mensagem-sistema">
+                        MEDIA DATABASE_
+                    </p>
+
+                    <h1>
+                        Biblioteca de
+                        <span>Termometria</span>
+                    </h1>
+
+                    <p>
+                        Assista a videoaulas sobre temperatura,
+                        termômetros, escalas termométricas,
+                        conversões e zero absoluto.
+                    </p>
+
+                </div>
+
+
+                <!-- ÍCONE CRIADO COM CSS -->
+
+                <div class="monitor-video" aria-hidden="true">
+
+                    <div class="monitor-tela">
+
+                        <div class="play-grande"></div>
+
+                    </div>
+
+                    <div class="monitor-base"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             PESQUISA
+        ======================================= -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    SEARCH_MEDIA
+                </span>
+
+            </div>
+
+
+            <div class="busca-videos">
+
+
+                <div class="campo-busca">
+
+                    <label for="buscarVideo">
+                        PESQUISAR VIDEOAULA
+                    </label>
+
+                    <input
+                        type="search"
+                        id="buscarVideo"
+                        placeholder="Ex: Kelvin, Fahrenheit, temperatura..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="contador-videos">
+
+                    <span>
+                        RESULTADOS
+                    </span>
+
+                    <strong id="contadorVideos">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             FILTROS
+        ======================================= -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    SELECT_TOPIC
+                </span>
+
+            </div>
+
+
+            <div class="filtros-videos">
+
+
+                <button
+                    type="button"
+                    class="filtro-video ativo"
+                    data-tema="todos"
+                >
+                    TODOS
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filtro-video"
+                    data-tema="temperatura"
+                >
+                    TEMPERATURA
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filtro-video"
+                    data-tema="termometros"
+                >
+                    TERMÔMETROS
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filtro-video"
+                    data-tema="escalas"
+                >
+                    ESCALAS
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filtro-video"
+                    data-tema="conversoes"
+                >
+                    CONVERSÕES
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filtro-video"
+                    data-tema="zero-absoluto"
+                >
+                    ZERO ABSOLUTO
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             CATÁLOGO
+        ======================================= -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    MEDIA_FILES
+                </span>
+
+            </div>
+
+
+            <div
+                class="grade-videos"
+                id="gradeVideos"
+            ></div>
+
+
+            <div
+                class="nenhum-video"
+                id="nenhumVideo"
+            >
+                Nenhuma videoaula encontrada para essa pesquisa.
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             PLAYER
+        ======================================= -->
+
+        <section
+            class="janela video-detalhes"
+            id="videoDetalhes"
+        >
+
+            <div class="barra-janela">
+
+                <span id="arquivoVideo">
+                    VIDEO_FILE.EXE
+                </span>
+
+                <button
+                    type="button"
+                    class="fechar-video"
+                    id="fecharVideo"
+                    aria-label="Fechar videoaula"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="detalhes-conteudo">
+
+
+                <p class="mensagem-sistema">
+                    VIDEO PLAYER_
+                </p>
+
+
+                <h2 id="detalheTitulo">
+                    Videoaula
+                </h2>
+
+
+                <div class="detalhes-tags">
+
+                    <span id="detalheTema">
+                        TEMA
+                    </span>
+
+                    <span id="detalheNivel">
+                        NÍVEL
+                    </span>
+
+                    <span id="detalheDuracao">
+                        VIDEOAULA
+                    </span>
+
+                </div>
+
+
+                <p
+                    id="detalheDescricao"
+                    class="detalhe-descricao"
+                ></p>
+
+
+                <!-- PLAYER DO YOUTUBE -->
+
+                <div class="player-container">
+
+                    <iframe
+                        id="youtubePlayer"
+                        src=""
+                        title="Videoaula de Termometria"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share
+                        "
+                        allowfullscreen
+                    ></iframe>
+
+                </div>
+
+
+                <!-- CANAL -->
+
+                <div class="video-professor">
+
+                    <span class="titulo-caixa">
+                        CANAL / PROFESSOR
+                    </span>
+
+                    <strong id="detalheCanal">
+                        --
+                    </strong>
+
+                    <a
+                        id="linkYoutube"
+                        class="link-youtube"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ABRIR NO YOUTUBE →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/videos.js"></script>
+
+
+</body>
+
+</html>

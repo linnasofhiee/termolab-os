@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Questões | TermoLab OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/questoes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="sistema">
+
+
+        <!-- ===============================
+             HERO
+        ================================ -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    QUESTION_CENTER.EXE
+                </span>
+
+                <a
+                    href="index.html"
+                    class="voltar"
+                >
+                    ← HOME
+                </a>
+
+            </div>
+
+
+            <div class="questoes-hero">
+
+                <div>
+
+                    <p class="mensagem-sistema">
+                        PRACTICE SYSTEM_
+                    </p>
+
+                    <h1>
+                        Treine
+                        <span>Termometria</span>
+                    </h1>
+
+                    <p>
+                        Resolva exercícios, pratique conversões
+                        e teste seus conhecimentos em questões
+                        inspiradas em vestibulares.
+                    </p>
+
+                </div>
+
+
+                <div class="icone-prova-grande" aria-hidden="true">
+
+                    <div class="prova-folha">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <div class="prova-check"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===============================
+             ESTATÍSTICAS
+        ================================ -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    STUDY_STATS
+                </span>
+
+            </div>
+
+
+            <div class="estatisticas-questoes">
+
+                <div>
+
+                    <span>
+                        RESPONDIDAS
+                    </span>
+
+                    <strong id="estatRespondidas">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ACERTOS
+                    </span>
+
+                    <strong id="estatAcertos">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        PRECISÃO
+                    </span>
+
+                    <strong id="estatPrecisao">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        XP
+                    </span>
+
+                    <strong id="estatXP">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===============================
+             MODOS
+        ================================ -->
+
+        <section class="janela">
+
+            <div class="barra-janela">
+
+                <span>
+                    SELECT_MODE
+                </span>
+
+            </div>
+
+
+            <div class="modos-questoes">
+
+                <button
+                    type="button"
+                    class="modo-questao ativo"
+                    data-modo="treino"
+                >
+                    BANCO DE QUESTÕES
+                </button>
+
+                <button
+                    type="button"
+                    class="modo-questao"
+                    data-modo="prova"
+                >
+                    MODO PROVA
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===============================
+             BANCO DE QUESTÕES
+        ================================ -->
+
+        <section
+            class="janela painel-modo ativo"
+            id="modoTreino"
+        >
+
+            <div class="barra-janela">
+
+                <span>
+                    QUESTION_DATABASE
+                </span>
+
+            </div>
+
+
+            <div class="filtros-questoes">
+
+                <button
+                    type="button"
+                    class="filtro-questao ativo"
+                    data-filtro="facil"
+                >
+                    FÁCIL
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro-questao"
+                    data-filtro="medio"
+                >
+                    MÉDIO
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro-questao"
+                    data-filtro="dificil"
+                >
+                    DIFÍCIL
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro-questao"
+                    data-filtro="vestibulares"
+                >
+                    VESTIBULARES
+                </button>
+
+            </div>
+
+
+            <div
+                class="lista-questoes"
+                id="listaQuestoes"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ===============================
+             MODO PROVA
+        ================================ -->
+
+        <section
+            class="janela painel-modo"
+            id="modoProva"
+        >
+
+            <div class="barra-janela">
+
+                <span>
+                    EXAM_MODE.EXE
+                </span>
+
+            </div>
+
+
+            <!-- TELA INICIAL -->
+
+            <div
+                class="inicio-prova"
+                id="inicioProva"
+            >
+
+                <p class="mensagem-sistema">
+                    EXAM CONFIGURATION_
+                </p>
+
+                <h2>
+                    Simulado de Termometria
+                </h2>
+
+                <p>
+                    Resolva uma sequência de questões
+                    sem visualizar a resolução até finalizar
+                    o simulado.
+                </p>
+
+
+                <div class="config-prova">
+
+                    <div>
+
+                        <span>
+                            QUESTÕES
+                        </span>
+
+                        <strong>
+                            10
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CONTEÚDO
+                        </span>
+
+                        <strong>
+                            TERMOMETRIA
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            RECOMPENSA
+                        </span>
+
+                        <strong>
+                            XP
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="iniciarProva"
+                    class="botao-retro"
+                >
+                    INICIAR SIMULADO
+                </button>
+
+            </div>
+
+
+            <!-- QUESTÃO DA PROVA -->
+
+            <div
+                class="prova-em-andamento"
+                id="provaEmAndamento"
+            >
+
+                <div class="prova-progresso">
+
+                    <div class="prova-progresso-texto">
+
+                        <span id="numeroQuestaoProva">
+                            QUESTÃO 1 DE 10
+                        </span>
+
+                        <strong id="percentualProva">
+                            10%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="barra-prova">
+
+                        <div
+                            class="barra-prova-preenchimento"
+                            id="barraProva"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="questao-prova-box">
+
+                    <span
+                        class="origem-prova"
+                        id="origemQuestaoProva"
+                    >
+                        SIMULADO
+                    </span>
+
+                    <h2 id="enunciadoProva">
+                        Questão
+                    </h2>
+
+                    <div
+                        class="alternativas-prova"
+                        id="alternativasProva"
+                    ></div>
+
+                    <p
+                        class="erro-prova"
+                        id="erroProva"
+                    ></p>
+
+
+                    <button
+                        type="button"
+                        id="confirmarRespostaProva"
+                        class="botao-retro"
+                    >
+                        CONFIRMAR RESPOSTA
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div
+                class="resultado-prova"
+                id="resultadoProva"
+            >
+
+                <p class="mensagem-sistema">
+                    EXAM COMPLETE_
+                </p>
+
+                <h2>
+                    Resultado
+                </h2>
+
+
+                <div class="nota-prova">
+
+                    <strong id="resultadoAcertos">
+                        0 / 10
+                    </strong>
+
+                    <span id="resultadoPercentual">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <p id="mensagemResultado"></p>
+
+
+                <div class="xp-prova-final">
+
+                    <span>
+                        XP CONQUISTADO
+                    </span>
+
+                    <strong id="xpProvaFinal">
+                        +0 XP
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="revisao-prova"
+                    id="revisaoProva"
+                ></div>
+
+
+                <button
+                    type="button"
+                    id="refazerProva"
+                    class="botao-secundario"
+                >
+                    NOVO SIMULADO
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/questoes.js"></script>
+
+
+</body>
+
+</html>
